@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ProCheck — Boat Owner Printables | Inspect it like a dealer would.</title>
+<meta name="description" content="Checklists, logbooks and guides for boat owners, written by a working BC marine salesman. Buy with your eyes open.">
+<style>
+  :root{
+    --graphite:#2F3437; --gelcoat:#F4F1EA; --slate:#5A6D68; --brass:#A98A5F;
+    --aluminium:#C9CED1; --ink:#222628; --card:#FFFFFF;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; background:var(--gelcoat); color:var(--ink); line-height:1.55;}
+  .wrap{max-width:960px; margin:0 auto; padding:0 20px;}
+  header{background:var(--graphite); color:var(--gelcoat); padding:18px 0;}
+  .header-row{display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;}
+  .brand{display:flex; align-items:center; gap:14px;}
+  .brand svg{width:92px; height:auto; background:var(--gelcoat); border-radius:8px; padding:6px;}
+  .brand-name{font-size:28px; font-weight:800; letter-spacing:3px;}
+  .brand-sub{font-size:12px; letter-spacing:2px; color:var(--aluminium); text-transform:uppercase;}
+  nav a{color:var(--gelcoat); text-decoration:none; font-weight:600; margin-left:18px; font-size:15px;}
+  nav a:hover{color:var(--brass);}
+  .hero{padding:56px 0 40px; text-align:center;}
+  .hero h1{font-size:40px; line-height:1.15; color:var(--graphite); font-weight:800;}
+  .hero h1 .accent{color:var(--brass);}
+  .hero p{max-width:640px; margin:18px auto 0; font-size:18px; color:#444;}
+  .cta-row{display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-top:28px;}
+  .hero-img{width:100%; height:380px; object-fit:cover; object-position:center 42%; border-radius:12px; margin-top:36px; display:block;}
+  .btn{display:inline-block; padding:14px 28px; border-radius:8px; font-weight:700; font-size:16px; text-decoration:none;}
+  .btn-primary{background:var(--brass); color:#fff;}
+  .btn-primary:hover{background:#967950;}
+  .btn-secondary{background:var(--graphite); color:var(--gelcoat);}
+  .btn-secondary:hover{background:#3d4347;}
+  section{padding:36px 0;}
+  h2{font-size:26px; color:var(--graphite); margin-bottom:6px;}
+  .section-sub{color:#555; margin-bottom:22px;}
+  .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(270px,1fr)); gap:16px;}
+  .card{background:var(--card); border:1px solid #E3DED2; border-radius:10px; padding:20px; display:flex; flex-direction:column;}
+  .card .no{font-size:12px; font-weight:700; letter-spacing:2px; color:var(--slate); text-transform:uppercase;}
+  .card h3{font-size:18px; color:var(--graphite); margin:6px 0 8px; line-height:1.3;}
+  .card p{font-size:14.5px; color:#555; flex:1;}
+  .card .price{margin-top:14px; font-weight:800; color:var(--graphite); font-size:17px;}
+  .card img.thumb{width:100%; height:200px; object-fit:cover; object-position:top; border-radius:6px; margin-bottom:12px;}
+  .card .shop-link{margin-top:10px; font-weight:700; font-size:15px;}
+  .card .shop-link a{color:var(--brass); text-decoration:none;}
+  .card .shop-link a:hover{text-decoration:underline;}
+  .card.featured{border:2px solid var(--brass);}
+  .badge{display:inline-block; background:var(--brass); color:#fff; font-size:11px; font-weight:700; letter-spacing:1px; padding:3px 8px; border-radius:4px; text-transform:uppercase;}
+  .badge-soon{background:var(--slate);}
+  .subscribe{background:var(--graphite); color:var(--gelcoat); border-radius:12px; padding:34px 30px;}
+  .subscribe h2{color:var(--gelcoat);}
+  .subscribe p{color:var(--aluminium); max-width:560px;}
+  .subscribe form{display:flex; gap:10px; margin-top:18px; flex-wrap:wrap;}
+  .subscribe input[type=email]{flex:1; min-width:240px; padding:13px 16px; border-radius:8px; border:none; font-size:16px;}
+  .subscribe button{padding:13px 24px; border:none; border-radius:8px; background:var(--brass); color:#fff; font-weight:700; font-size:16px; cursor:pointer;}
+  .follow-row{display:flex; gap:10px; flex-wrap:wrap; margin-top:20px;}
+  .follow-row a{color:var(--gelcoat); border:1px solid var(--slate); padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14.5px; font-weight:600;}
+  .follow-row a:hover{border-color:var(--brass); color:var(--brass);}
+  .about p{max-width:700px; color:#444; margin-bottom:12px;}
+  footer{background:var(--graphite); color:var(--aluminium); padding:26px 0; margin-top:20px; font-size:14px;}
+  footer .wrap{display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;}
+  footer a{color:var(--gelcoat); text-decoration:none;}
+  .topbar-signup{display:flex; align-items:center; gap:14px; flex-wrap:wrap; border-top:1px solid #454b4f; margin-top:14px; padding-top:14px;}
+  .topbar-signup .tb-label{font-size:14.5px; font-weight:600; color:var(--gelcoat);}
+  .topbar-signup form{display:flex; gap:8px; flex:1; min-width:260px;}
+  .topbar-signup input[type=email]{flex:1; padding:10px 14px; border-radius:8px; border:none; font-size:15px; min-width:180px;}
+  .topbar-signup button{padding:10px 20px; border:none; border-radius:8px; background:var(--brass); color:#fff; font-weight:700; font-size:15px; cursor:pointer;}
+  .buy-row{display:flex; gap:8px; flex-wrap:wrap; margin-top:12px;}
+  .buy-row a{text-decoration:none; font-size:14px; font-weight:700; padding:8px 14px; border-radius:6px;}
+  .buy-etsy{background:var(--brass); color:#fff;}
+  .buy-etsy:hover{background:#967950;}
+  .buy-gum{border:1.5px solid var(--graphite); color:var(--graphite);}
+  .buy-gum:hover{background:var(--graphite); color:var(--gelcoat);}
+  .buy-release{border:1.5px solid var(--slate); color:var(--slate);}
+  .contact-form{max-width:640px;}
+  .contact-form label{display:block; font-weight:600; font-size:14.5px; color:var(--graphite); margin:14px 0 5px;}
+  .contact-form input[type=text], .contact-form input[type=email], .contact-form textarea{width:100%; padding:12px 14px; border:1px solid #CFC9BA; border-radius:8px; font-size:16px; font-family:inherit; background:#fff;}
+  .contact-form textarea{min-height:130px; resize:vertical;}
+  .contact-form button{margin-top:16px; padding:13px 26px; border:none; border-radius:8px; background:var(--brass); color:#fff; font-weight:700; font-size:16px; cursor:pointer;}
+  .contact-form button:hover{background:#967950;}
+  .about-photos{display:flex; gap:16px; flex-wrap:wrap; margin:6px 0 18px;}
+  .about-photos figure{margin:0;}
+  .about-photos img{height:250px; width:auto; border-radius:10px; display:block;}
+  .about-photos figcaption{font-size:13px; color:#777; margin-top:6px;}
+  @media (max-width:560px){ .hero h1{font-size:31px;} .brand-name{font-size:22px;} .hero-img{height:230px;} .about-photos img{height:200px;} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-row">
+    <div class="brand">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 58" aria-label="ProCheck logo"><path d="M22 16 Q70 -7 112 22" fill="none" stroke="#2F3437" stroke-width="4" stroke-linecap="round"/><path d="M24 44 Q68 64 112 38" fill="none" stroke="#2F3437" stroke-width="3.5" stroke-linecap="round"/><line x1="21" y1="30" x2="116" y2="30" stroke="#5A6D68" stroke-width="2.5"/><rect x="2" y="20" width="19" height="19" rx="5" fill="#2F3437"/><circle cx="66" cy="30" r="6" fill="#A98A5F"/></svg>
+      <div>
+        <div class="brand-name">PROCHECK</div>
+        <div class="brand-sub">Boat Owner Printables</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#guides">The Guides</a>
+      <a href="#merch">Merch</a>
+      <a href="#updates">New Releases</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+  <div class="wrap">
+    <div class="topbar-signup" id="releaselist">
+      <span class="tb-label">New guides, first — join the release list:</span>
+      <!-- TODO at deploy: point this form at the email-list provider (same list as the subscribe form below). -->
+      <form action="#" method="post">
+        <input type="email" name="email" placeholder="you@example.com" required>
+        <button type="submit">Notify me</button>
+      </form>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="hero">
+    <h1>Inspect it like a <span class="accent">dealer</span> would.</h1>
+    <p>Checklists, logbooks and guides for boat owners — written by a working marine salesman in British Columbia, from the process used every day on the lot. Print it, take it to the boat, and buy with your eyes open.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://www.etsy.com/ca/shop/ProCheck">Shop on Etsy</a>
+      <a class="btn btn-secondary" href="https://procheck.gumroad.com">Shop on Gumroad</a>
+    </div>
+    <img class="hero-img" src="img/hero.jpg" alt="A KingFisher boat on the water">
+  </div>
+
+  <section id="guides">
+    <h2>The guides</h2>
+    <p class="section-sub">Instant-download PDFs. Every guide also comes with a calculating spreadsheet edition where the numbers matter. Prices in USD on Etsy and Gumroad.</p>
+    <div class="grid">
+      <div class="card featured">
+        <div><span class="badge">Best value</span></div>
+        <h3>The Complete Bundle — All Six Guides</h3>
+        <p>Every ProCheck guide in one file: buyer checklist, maintenance logbook, winterization, safety &amp; float plan, expense tracker, and the dealer guide.</p>
+        <div class="price">$39.99</div>
+        <div class="buy-row"><a class="buy-etsy" href="https://www.etsy.com/ca/listing/4617291502">Buy on Etsy</a><a class="buy-gum" href="https://procheck.gumroad.com/l/azhvy">Gumroad</a></div>
+      </div>
+      <div class="card">
+        <a href="https://www.etsy.com/ca/listing/4616790477"><img class="thumb" src="img/cover-no01.jpg" alt="Cover of the Used Boat &amp; Outboard Buyer Checklist"></a>
+        <div class="no">No. 01</div>
+        <h3>Used Boat &amp; Outboard Buyer Checklist</h3>
+        <p>The full inspection: seller questions, hull, motor, trailer, sea trial, a repair-cost estimator, the /80 scorecard and the negotiation script.</p>
+        <div class="price">$16.99</div>
+        <div class="buy-row"><a class="buy-etsy" href="https://www.etsy.com/ca/listing/4616790477">Buy on Etsy</a><a class="buy-gum" href="https://procheck.gumroad.com/l/wraoew">Gumroad</a></div>
+      </div>
+      <div class="card">
+        <a href="https://www.etsy.com/ca/listing/4616865201"><img class="thumb" src="img/cover-no02.jpg" alt="Cover of the Boat Maintenance Logbook"></a>
+        <div class="no">No. 02</div>
+        <h3>Boat Maintenance Logbook</h3>
+        <p>The written record of everything done to your boat and motor — service, repairs, parts, costs and hours, kept the way a dealership keeps it.</p>
+        <div class="price">$16.99</div>
+        <div class="buy-row"><a class="buy-etsy" href="https://www.etsy.com/ca/listing/4616865201">Buy on Etsy</a><a class="buy-gum" href="https://procheck.gumroad.com/l/kjqwj">Gumroad</a></div>
+      </div>
+      <div class="card">
+        <a href="https://www.etsy.com/ca/listing/4616797071"><img class="thumb" src="img/cover-no03.jpg" alt="Cover of Winterization &amp; Spring Commissioning"></a>
+        <div class="no">No. 03</div>
+        <h3>Winterization &amp; Spring Commissioning</h3>
+        <p>Put her away properly in the fall, wake her up properly in the spring — outboards, inboards, and the trailer too.</p>
+        <div class="price">$13.99</div>
+        <div class="buy-row"><a class="buy-etsy" href="https://www.etsy.com/ca/listing/4616797071">Buy on Etsy</a><a class="buy-gum" href="https://procheck.gumroad.com/l/jvsaqw">Gumroad</a></div>
+      </div>
+      <div class="card">
+        <a href="https://www.etsy.com/ca/listing/4617283556"><img class="thumb" src="img/cover-no04.jpg" alt="Cover of Pre-Departure Safety, Float Plan &amp; Trip Log"></a>
+        <div class="no">No. 04</div>
+        <h3>Pre-Departure Safety, Float Plan &amp; Trip Log</h3>
+        <p>The safety check before every trip, a float plan worth leaving behind, and a log of where you went.</p>
+        <div class="price">$10.99</div>
+        <div class="buy-row"><a class="buy-etsy" href="https://www.etsy.com/ca/listing/4617283556">Buy on Etsy</a><a class="buy-gum" href="https://procheck.gumroad.com/l/olojjo">Gumroad</a></div>
+      </div>
+      <div class="card">
+        <a href="https://www.etsy.com/ca/listing/4617285214"><img class="thumb" src="img/cover-no05.jpg" alt="Cover of Fuel, Engine Hours &amp; Expense Tracker"></a>
+        <div class="no">No. 05</div>
+        <h3>Fuel, Engine Hours &amp; Expense Tracker</h3>
+        <p>What the boat actually costs to run — fuel, hours and expenses, tracked season by season.</p>
+        <div class="price">$10.99</div>
+        <div class="buy-row"><a class="buy-etsy" href="https://www.etsy.com/ca/listing/4617285214">Buy on Etsy</a><a class="buy-gum" href="https://procheck.gumroad.com/l/xkqwg">Gumroad</a></div>
+      </div>
+      <div class="card">
+        <div class="no">No. 06</div>
+        <h3>Buy It Like a Dealer Sells It</h3>
+        <p>Working with a dealer, from the other side of the desk: pricing, fees, trade-ins, deposits, and delivery day — honestly, both ways.</p>
+        <div class="price">$16.99</div>
+        <div class="buy-row"><a class="buy-etsy" href="https://www.etsy.com/ca/listing/4618312270">Buy on Etsy</a><a class="buy-gum" href="https://procheck.gumroad.com/l/xaafp">Gumroad</a></div>
+      </div>
+      <div class="card">
+        <div class="no">Labels</div>
+        <h3>Winterizing Label &amp; Tag Pack</h3>
+        <p>Printable tags and labels for winter lay-up, so spring-you knows exactly what fall-you did.</p>
+        <div class="price">$9.99</div>
+        <div class="buy-row"><a class="buy-etsy" href="https://www.etsy.com/ca/listing/4617450803">Buy on Etsy</a><a class="buy-gum" href="https://procheck.gumroad.com/l/winterizing-labels">Gumroad</a></div>
+      </div>
+      <div class="card">
+        <div><span class="badge badge-soon">Coming soon</span></div>
+        <div class="no" style="margin-top:8px;">No. 07</div>
+        <h3>Preparing for Your Maiden Voyage</h3>
+        <p>Your first trip out on your new boat — calm, short, and on purpose. Join the release list below and you'll hear the day it lands.</p>
+        <div class="price">In the works</div>
+        <div class="buy-row"><a class="buy-release" href="#releaselist">Join the release list</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="merch">
+    <h2>ProCheck merch</h2>
+    <p class="section-sub">For the boat, the truck and the dock — designed in Coquitlam, printed to order, and shipped across Canada and the US. Prices in USD. No returns or exchanges on merch (defects made right, of course).</p>
+    <div class="grid">
+      <div class="card">
+        <img class="thumb" src="img/merch-crew.jpg" alt="Captain can cooler from the ProCheck Crew Pack">
+        <h3>The Crew Pack</h3>
+        <p>Five ranks — Admiral, Captain, First Mate, Deckhand and Ballast — on caps, tees, tumblers, coolers and travel mugs, each with its own byline. Outfit the whole crew and save more: 2 items 15% off, 3 for 20%, 4 for 25%, and the full crew of five for 30% off.</p>
+        <div class="price">From $12.99</div>
+        <div class="shop-link"><a href="https://www.etsy.com/ca/shop/ProCheck">See it on Etsy &rarr;</a></div>
+      </div>
+      <div class="card">
+        <img class="thumb" src="img/merch-tee.jpg" alt="Plug In? boating tee">
+        <h3>Boating tees</h3>
+        <p>The humour line — the things every boat owner is already thinking, said out loud. Soft tees for the dock, the ramp and everywhere the stories get told.</p>
+        <div class="price">From $29.99</div>
+        <div class="shop-link"><a href="https://www.etsy.com/ca/shop/ProCheck">See it on Etsy &rarr;</a></div>
+      </div>
+      <div class="card">
+        <img class="thumb" src="img/merch-cap.jpg" alt="Embroidered ProCheck Captain cap">
+        <h3>Caps</h3>
+        <p>Embroidered ProCheck caps — the mark on the front, PROCHECK across the back. One for the captain, and ranks for everyone else aboard.</p>
+        <div class="price">$34.99</div>
+        <div class="shop-link"><a href="https://www.etsy.com/ca/shop/ProCheck">See it on Etsy &rarr;</a></div>
+      </div>
+      <div class="card">
+        <img class="thumb" src="img/merch-drink.jpg" alt="ProCheck Captain tumbler">
+        <h3>Tumblers, mugs, coolers &amp; stickers</h3>
+        <p>Printed 20 oz tumblers, 25 oz travel mugs, can coolers and weatherproof stickers — the finishing kit for the boat and the truck.</p>
+        <div class="price">From $7.99</div>
+        <div class="shop-link"><a href="https://www.etsy.com/ca/shop/ProCheck">See it on Etsy &rarr;</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="updates">
+    <div class="subscribe">
+      <h2>New publications, first</h2>
+      <p>ProCheck releases a few new guides a year. Leave your email and you'll get one short message when a new one lands — no noise in between, unsubscribe any time.</p>
+      <!-- TODO at deploy: point this form at the email-list provider (Kit/Mailchimp form action URL). -->
+      <form action="#" method="post">
+        <input type="email" name="email" placeholder="you@example.com" required>
+        <button type="submit">Notify me</button>
+      </form>
+      <div class="follow-row">
+        <a href="https://www.etsy.com/ca/shop/ProCheck">&#9829; Favourite the Etsy shop</a>
+        <a href="https://procheck.gumroad.com">Follow on Gumroad</a>
+        <a href="https://www.pinterest.com/procheckprintables/">Follow on Pinterest</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About ProCheck</h2>
+    <div class="about-photos">
+      <figure>
+        <img src="img/author-headshot.jpg" alt="Michael Austin, author of the ProCheck guides">
+        <figcaption>Michael Austin</figcaption>
+      </figure>
+      <figure>
+        <img src="img/author-working.jpg" alt="Michael Austin at the dealership, beside a Yamaha outboard">
+        <figcaption>At the dealership, beside a Yamaha outboard</figcaption>
+      </figure>
+    </div>
+    <p>I'm Michael Austin. My full-time role is in marine sales with GA Checkpoint Motorsports &amp; Marine in Port Coquitlam, British Columbia, on Canada's West Coast. I am also a qualified skipper, and I previously owned and operated a marine fabrication business making canvas boat tops. I spend my working days on both sides of the deal — walking buyers around new and used boats, taking trades in, and answering the same questions you're likely asking as you read this.</p>
+    <p>ProCheck is that whole process, written down: buying new or used, from a dealer or a private seller — and then owning the boat well once it's yours. A private seller's photos never show a soft transom or milky lower-unit oil, and a shiny new boat still deserves hard questions about price, paperwork and delivery day. These checklists and logbooks are the ones I follow myself, and the ones I'd hand a friend: print them, take them to the boat, and buy — and boat — with your eyes open.</p>
+    <p>Away from the dealership, I'm still outdoors — boating on the coast, or camping and fishing the interior lakes.</p>
+    <p>Questions or feedback on a guide? <a href="https://forms.gle/VUCaTNqaGFD32rnU6">Tell me here</a> — it shapes what gets written next.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p class="section-sub">A question about a guide, a suggestion for the next one, or a boat story worth hearing — send it here and it lands straight in my inbox.</p>
+    <!-- TODO at deploy: point this form at the Formspree endpoint (free account, registered to the ProCheck email) so submissions email Michael directly. -->
+    <form class="contact-form" action="#" method="post">
+      <label for="cf-name">Your name</label>
+      <input type="text" id="cf-name" name="name" required>
+      <label for="cf-email">Your email</label>
+      <input type="email" id="cf-email" name="email" placeholder="you@example.com" required>
+      <label for="cf-comments">Comments / notes</label>
+      <textarea id="cf-comments" name="comments" required></textarea>
+      <button type="submit">Send message</button>
+    </form>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div>&copy; 2026 ProCheck — Boat Owner Printables, by Michael Austin &middot; Coquitlam, BC</div>
+    <div><a href="https://procheckmarine.com">PROCHECKMARINE.COM</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
