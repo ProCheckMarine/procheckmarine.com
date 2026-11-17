@@ -11,6 +11,7 @@
     --aluminium:#C9CED1; --ink:#222628; --card:#FFFFFF;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
   body{font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; background:var(--gelcoat); color:var(--ink); line-height:1.55;}
   .wrap{max-width:960px; margin:0 auto; padding:0 20px;}
   header{background:var(--graphite); color:var(--gelcoat); padding:18px 0;}
@@ -21,6 +22,10 @@
   .brand-sub{font-size:12px; letter-spacing:2px; color:var(--aluminium); text-transform:uppercase;}
   nav a{color:var(--gelcoat); text-decoration:none; font-weight:600; margin-left:18px; font-size:15px;}
   nav a:hover{color:var(--brass);}
+  .nav-toggle{display:none; background:none; border:1.5px solid var(--slate); color:var(--gelcoat); font-size:15px; font-weight:700; padding:8px 14px; border-radius:8px; cursor:pointer;}
+  .to-top{text-align:right; margin-top:20px;}
+  .to-top a{color:var(--slate); text-decoration:none; font-size:14px; font-weight:600;}
+  .to-top a:hover{color:var(--brass);}
   .hero{padding:56px 0 40px; text-align:center;}
   .hero h1{font-size:40px; line-height:1.15; color:var(--graphite); font-weight:800;}
   .hero h1 .accent{color:var(--brass);}
@@ -83,12 +88,18 @@
   .about-photos figure{margin:0;}
   .about-photos img{height:250px; width:auto; border-radius:10px; display:block;}
   .about-photos figcaption{font-size:13px; color:#777; margin-top:6px;}
+  @media (max-width:700px){
+    .nav-toggle{display:block;}
+    nav{display:none; width:100%; flex-direction:column; padding-top:6px;}
+    nav.open{display:flex;}
+    nav a{margin:0; padding:10px 2px; border-top:1px solid #454b4f; font-size:16px;}
+  }
   @media (max-width:560px){ .hero h1{font-size:31px;} .brand-name{font-size:22px;} .hero-img{height:230px;} .about-photos img{height:200px;} }
 </style>
 </head>
 <body>
 
-<header>
+<header id="top">
   <div class="wrap header-row">
     <div class="brand">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 58" aria-label="ProCheck logo"><path d="M22 16 Q70 -7 112 22" fill="none" stroke="#2F3437" stroke-width="4" stroke-linecap="round"/><path d="M24 44 Q68 64 112 38" fill="none" stroke="#2F3437" stroke-width="3.5" stroke-linecap="round"/><line x1="21" y1="30" x2="116" y2="30" stroke="#5A6D68" stroke-width="2.5"/><rect x="2" y="20" width="19" height="19" rx="5" fill="#2F3437"/><circle cx="66" cy="30" r="6" fill="#A98A5F"/></svg>
@@ -97,7 +108,8 @@
         <div class="brand-sub">Boat Owner Printables</div>
       </div>
     </div>
-    <nav>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="site-nav">&#9776; Menu</button>
+    <nav id="site-nav">
       <a href="#guides">The Guides</a>
       <a href="#merch">Merch</a>
       <a href="#updates">New Releases</a>
@@ -211,31 +223,32 @@
         <img class="thumb" src="img/merch-crew.jpg" alt="Captain can cooler from the ProCheck Crew Pack">
         <h3>The Crew Pack</h3>
         <p>Five ranks — Admiral, Captain, First Mate, Deckhand and Ballast — on caps, tees, tumblers, coolers and travel mugs, each with its own byline. Outfit the whole crew and save more: 2 items 15% off, 3 for 20%, 4 for 25%, and the full crew of five for 30% off.</p>
-        <div class="price">From $12.99</div>
+        <div class="price">From $9.99</div>
         <div class="shop-link"><a href="https://www.etsy.com/ca/shop/ProCheck">See it on Etsy &rarr;</a></div>
       </div>
       <div class="card">
         <img class="thumb" src="img/merch-tee.jpg" alt="Plug In? boating tee">
         <h3>Boating tees</h3>
         <p>The humour line — the things every boat owner is already thinking, said out loud. Soft tees for the dock, the ramp and everywhere the stories get told.</p>
-        <div class="price">From $29.99</div>
+        <div class="price">From $26.99</div>
         <div class="shop-link"><a href="https://www.etsy.com/ca/shop/ProCheck">See it on Etsy &rarr;</a></div>
       </div>
       <div class="card">
         <img class="thumb" src="img/merch-cap.jpg" alt="Embroidered ProCheck Captain cap">
         <h3>Caps</h3>
         <p>Embroidered ProCheck caps — the mark on the front, PROCHECK across the back. One for the captain, and ranks for everyone else aboard.</p>
-        <div class="price">$34.99</div>
+        <div class="price">$36.99</div>
         <div class="shop-link"><a href="https://www.etsy.com/ca/shop/ProCheck">See it on Etsy &rarr;</a></div>
       </div>
       <div class="card">
         <img class="thumb" src="img/merch-drink.jpg" alt="ProCheck Captain tumbler">
         <h3>Tumblers, mugs, coolers &amp; stickers</h3>
         <p>Printed 20 oz tumblers, 25 oz travel mugs, can coolers and weatherproof stickers — the finishing kit for the boat and the truck.</p>
-        <div class="price">From $7.99</div>
+        <div class="price">From $6.49</div>
         <div class="shop-link"><a href="https://www.etsy.com/ca/shop/ProCheck">See it on Etsy &rarr;</a></div>
       </div>
     </div>
+    <div class="to-top"><a href="#top">&uarr; Back to top</a></div>
   </section>
 
   <section id="updates">
@@ -253,6 +266,7 @@
         <a href="https://www.pinterest.com/procheckprintables/">Follow on Pinterest</a>
       </div>
     </div>
+    <div class="to-top"><a href="#top">&uarr; Back to top</a></div>
   </section>
 
   <section id="about" class="about">
@@ -271,6 +285,7 @@
     <p>ProCheck is that whole process, written down: buying new or used, from a dealer or a private seller — and then owning the boat well once it's yours. A private seller's photos never show a soft transom or milky lower-unit oil, and a shiny new boat still deserves hard questions about price, paperwork and delivery day. These checklists and logbooks are the ones I follow myself, and the ones I'd hand a friend: print them, take them to the boat, and buy — and boat — with your eyes open.</p>
     <p>Away from the dealership, I'm still outdoors. You'll find me boating on the coast with my family, or camped beside an interior lake with a fishing rod out and the rooftop tent up. I'm also a UK-trained Mountain Leader, with winter and survival skills — the kind of background that teaches you a trip goes well when the planning does. ProCheck is that habit applied to boats: check the right things, in the right order, before they become problems.</p>
     <p>Questions or feedback on a guide? <a href="https://forms.gle/VUCaTNqaGFD32rnU6">Tell me here</a> — it shapes what gets written next.</p>
+    <div class="to-top"><a href="#top">&uarr; Back to top</a></div>
   </section>
 
   <section id="contact">
@@ -286,6 +301,7 @@
       <textarea id="cf-comments" name="comments" required></textarea>
       <button type="submit">Send message</button>
     </form>
+    <div class="to-top"><a href="#top">&uarr; Back to top</a></div>
   </section>
 </div>
 
@@ -295,6 +311,24 @@
     <div><a href="https://procheckmarine.com">PROCHECKMARINE.COM</a></div>
   </div>
 </footer>
+
+<script>
+  (function(){
+    var btn = document.getElementById('navToggle');
+    var nav = document.getElementById('site-nav');
+    if(!btn || !nav) return;
+    btn.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        nav.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+</script>
 
 </body>
 </html>
