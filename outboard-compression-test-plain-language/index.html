@@ -1,1 +1,229 @@
-placeholder
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Outboard Compression Test, in Plain Language: What It Tells a Buyer</title>
+<meta name="description" content="A compression test doesn&#x27;t give you one magic number. Learn what it measures, why even readings matter, and what to check in the lower unit too.">
+<link rel="canonical" href="https://procheckmarine.com/outboard-compression-test-plain-language/">
+<style>
+  :root{
+    --graphite:#2F3437; --gelcoat:#F4F1EA; --slate:#5A6D68; --brass:#A98A5F;
+    --aluminium:#C9CED1; --ink:#222628; --card:#FFFFFF;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; background:var(--gelcoat); color:var(--ink); line-height:1.55;}
+  .wrap{max-width:960px; margin:0 auto; padding:0 20px;}
+  header{background:var(--graphite); color:var(--gelcoat); padding:18px 0;}
+  .header-row{display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;}
+  .brand{display:flex; align-items:center; gap:14px;}
+  .brand svg{width:92px; height:auto; background:var(--gelcoat); border-radius:8px; padding:6px;}
+  .brand-name{font-size:28px; font-weight:800; letter-spacing:3px;}
+  .brand-sub{font-size:12px; letter-spacing:2px; color:var(--aluminium); text-transform:uppercase;}
+  nav a{color:var(--gelcoat); text-decoration:none; font-weight:600; margin-left:18px; font-size:15px;}
+  nav a:hover{color:var(--brass);}
+  .nav-toggle{display:none; background:none; border:1.5px solid var(--slate); color:var(--gelcoat); font-size:15px; font-weight:700; padding:8px 14px; border-radius:8px; cursor:pointer;}
+  .to-top{text-align:right; margin-top:20px;}
+  .to-top a{color:var(--slate); text-decoration:none; font-size:14px; font-weight:600;}
+  .to-top a:hover{color:var(--brass);}
+  .hero{padding:56px 0 40px; text-align:center;}
+  .hero h1{font-size:40px; line-height:1.15; color:var(--graphite); font-weight:800;}
+  .hero h1 .accent{color:var(--brass);}
+  .hero p{max-width:640px; margin:18px auto 0; font-size:18px; color:#444;}
+  .cta-row{display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-top:28px;}
+  .hero-img{width:100%; height:380px; object-fit:cover; object-position:center 42%; border-radius:12px; margin-top:36px; display:block;}
+  .btn{display:inline-block; padding:14px 28px; border-radius:8px; font-weight:700; font-size:16px; text-decoration:none;}
+  .btn-primary{background:var(--brass); color:#fff;}
+  .btn-primary:hover{background:#967950;}
+  .btn-secondary{background:var(--graphite); color:var(--gelcoat);}
+  .btn-secondary:hover{background:#3d4347;}
+  section{padding:36px 0;}
+  h2{font-size:26px; color:var(--graphite); margin-bottom:6px;}
+  .section-sub{color:#555; margin-bottom:22px;}
+  .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(270px,1fr)); gap:16px;}
+  .card{background:var(--card); border:1px solid #E3DED2; border-radius:10px; padding:20px; display:flex; flex-direction:column;}
+  .card .no{font-size:12px; font-weight:700; letter-spacing:2px; color:var(--slate); text-transform:uppercase;}
+  .card h3{font-size:18px; color:var(--graphite); margin:6px 0 8px; line-height:1.3;}
+  .card p{font-size:14.5px; color:#555; flex:1;}
+  .card .price{margin-top:14px; font-weight:800; color:var(--graphite); font-size:17px;}
+  .card img.thumb{width:100%; height:200px; object-fit:cover; object-position:top; border-radius:6px; margin-bottom:12px;}
+  .card .shop-link{margin-top:10px; font-weight:700; font-size:15px;}
+  .card .shop-link a{color:var(--brass); text-decoration:none;}
+  .card .shop-link a:hover{text-decoration:underline;}
+  .card.featured{border:2px solid var(--brass);}
+  .badge{display:inline-block; background:var(--brass); color:#fff; font-size:11px; font-weight:700; letter-spacing:1px; padding:3px 8px; border-radius:4px; text-transform:uppercase;}
+  .badge-soon{background:var(--slate);}
+  .subscribe{background:var(--graphite); color:var(--gelcoat); border-radius:12px; padding:34px 30px;}
+  .subscribe h2{color:var(--gelcoat);}
+  .subscribe p{color:var(--aluminium); max-width:560px;}
+  .subscribe form{display:flex; gap:10px; margin-top:18px; flex-wrap:wrap;}
+  .subscribe input[type=email]{flex:1; min-width:240px; padding:13px 16px; border-radius:8px; border:none; font-size:16px;}
+  .subscribe button{padding:13px 24px; border:none; border-radius:8px; background:var(--brass); color:#fff; font-weight:700; font-size:16px; cursor:pointer;}
+  .follow-row{display:flex; gap:10px; flex-wrap:wrap; margin-top:20px;}
+  .follow-row a{color:var(--gelcoat); border:1px solid var(--slate); padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14.5px; font-weight:600;}
+  .follow-row a:hover{border-color:var(--brass); color:var(--brass);}
+  .about p{max-width:700px; color:#444; margin-bottom:12px;}
+  footer{background:var(--graphite); color:var(--aluminium); padding:26px 0; margin-top:20px; font-size:14px;}
+  footer .wrap{display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;}
+  footer a{color:var(--gelcoat); text-decoration:none;}
+  .topbar-signup{display:flex; align-items:center; gap:14px; flex-wrap:wrap; border-top:1px solid #454b4f; margin-top:14px; padding-top:14px;}
+  .topbar-signup .tb-label{font-size:14.5px; font-weight:600; color:var(--gelcoat);}
+  .topbar-signup form{display:flex; gap:8px; flex:1; min-width:260px;}
+  .topbar-signup input[type=email]{flex:1; padding:10px 14px; border-radius:8px; border:none; font-size:15px; min-width:180px;}
+  .topbar-signup button{padding:10px 20px; border:none; border-radius:8px; background:var(--brass); color:#fff; font-weight:700; font-size:15px; cursor:pointer;}
+  .buy-row{display:flex; gap:8px; flex-wrap:wrap; margin-top:12px;}
+  .buy-row a{text-decoration:none; font-size:14px; font-weight:700; padding:8px 14px; border-radius:6px;}
+  .buy-etsy{background:var(--brass); color:#fff;}
+  .buy-etsy:hover{background:#967950;}
+  .buy-gum{border:1.5px solid var(--graphite); color:var(--graphite);}
+  .buy-gum:hover{background:var(--graphite); color:var(--gelcoat);}
+  .buy-release{border:1.5px solid var(--slate); color:var(--slate);}
+  .contact-form{max-width:640px;}
+  .contact-form label{display:block; font-weight:600; font-size:14.5px; color:var(--graphite); margin:14px 0 5px;}
+  .contact-form input[type=text], .contact-form input[type=email], .contact-form textarea{width:100%; padding:12px 14px; border:1px solid #CFC9BA; border-radius:8px; font-size:16px; font-family:inherit; background:#fff;}
+  .contact-form textarea{min-height:130px; resize:vertical;}
+  .contact-form button{margin-top:16px; padding:13px 26px; border:none; border-radius:8px; background:var(--brass); color:#fff; font-weight:700; font-size:16px; cursor:pointer;}
+  .contact-form button:hover{background:#967950;}
+  .about-photos{display:flex; gap:16px; flex-wrap:wrap; margin:6px 0 18px;}
+  .about-photos figure{margin:0;}
+  .about-photos img{height:250px; width:auto; border-radius:10px; display:block;}
+  .about-photos figcaption{font-size:13px; color:#777; margin-top:6px;}
+  @media (max-width:700px){
+    .nav-toggle{display:block;}
+    nav{display:none; width:100%; flex-direction:column; padding-top:6px;}
+    nav.open{display:flex;}
+    nav a{margin:0; padding:10px 2px; border-top:1px solid #454b4f; font-size:16px;}
+  }
+  @media (max-width:560px){ .hero h1{font-size:31px;} .brand-name{font-size:22px;} .hero-img{height:230px;} .about-photos img{height:200px;} }
+
+  .article{padding:42px 0 8px; max-width:760px;}
+  .article h1{font-size:34px; line-height:1.2; color:var(--graphite); font-weight:800; margin-bottom:18px;}
+  .article h2{margin:32px 0 10px;}
+  .article h3{font-size:19px; color:var(--graphite); margin:24px 0 8px;}
+  .article p{margin-bottom:14px; color:#333;}
+  .article ul,.article ol{margin:0 0 16px 22px;}
+  .article li{margin-bottom:7px; color:#333;}
+  .article a{color:var(--slate); font-weight:600;}
+  .article a:hover{color:var(--brass);}
+  .article hr{border:none; border-top:1px solid #E3DED2; margin:28px 0;}
+  .article .author-line{font-weight:700; color:var(--graphite); margin-top:22px;}
+  .article li.check{list-style:none; margin-left:-22px;}
+  .article input[type=checkbox]{width:16px; height:16px; margin-right:8px; vertical-align:-2px; accent-color:var(--brass);}
+  .sources{background:var(--card); border:1px solid #E3DED2; border-radius:10px; padding:20px 22px; margin:30px 0 6px;}
+  .sources h2{font-size:20px; margin:0 0 10px;}
+  .sources ul{margin:0 0 0 20px;}
+  .sources li{margin-bottom:6px;}
+  .cta-box{margin:30px 0 8px; max-width:760px;}
+  @media (max-width:560px){ .article h1{font-size:27px;} }
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="wrap header-row">
+    <a class="brand" href="/" style="text-decoration:none;color:inherit;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 58" aria-label="ProCheck logo"><path d="M22 16 Q70 -7 112 22" fill="none" stroke="#2F3437" stroke-width="4" stroke-linecap="round"/><path d="M24 44 Q68 64 112 38" fill="none" stroke="#2F3437" stroke-width="3.5" stroke-linecap="round"/><line x1="21" y1="30" x2="116" y2="30" stroke="#5A6D68" stroke-width="2.5"/><rect x="2" y="20" width="19" height="19" rx="5" fill="#2F3437"/><circle cx="66" cy="30" r="6" fill="#A98A5F"/></svg>
+      <div>
+        <div class="brand-name">PROCHECK</div>
+        <div class="brand-sub">Boat Owner Printables</div>
+      </div>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="site-nav">&#9776; Menu</button>
+    <nav id="site-nav">
+      <a href="/#guides">The Guides</a>
+      <a href="/#merch">Merch</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+  <div class="wrap">
+    <div class="topbar-signup" id="releaselist">
+      <span class="tb-label">New guides, first — join the release list:</span>
+      <!-- TODO at deploy: point this form at the email-list provider (same list as the subscribe form below). -->
+      <form action="https://formspree.io/f/meaggjrn" method="post">
+        <input type="email" name="email" placeholder="you@example.com" required>
+        <button type="submit">Notify me</button>
+      </form>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <article class="article">
+<h1>Outboard Compression Test, in Plain Language: What It Tells a Buyer</h1>
+<p>Of all the tests people talk about when buying a used outboard, the compression test is the one most often misunderstood. Sellers quote a number like it's a grade on a report card. Buyers search online for the "right" number for that model, as if there's a single pass mark stamped somewhere.</p>
+<p>There isn't — and once you understand what the test actually measures, you'll see why the pattern of the readings tells you far more than any one figure.</p>
+<h2>What a compression test actually measures</h2>
+<p>Inside the engine, each piston travels up its cylinder and squeezes the air-and-fuel mixture into a small space before it ignites. That squeeze is compression. A cylinder that seals well — piston rings sealing against the cylinder wall, valves (on a four-stroke) closing fully, head gasket holding — squeezes hard. A worn or damaged cylinder leaks, and squeezes less.</p>
+<p>A compression test measures that squeeze, cylinder by cylinder, with a pressure gauge. In outline, a technician removes the spark plugs, threads the gauge into one cylinder at a time, and cranks the engine over, recording the peak reading for each cylinder. That's the whole concept. It's a health check on the engine's ability to seal — nothing more mystical than that.</p>
+<h2>Why consistency matters more than the number</h2>
+<p>Here's the part that changes how you read results: <strong>evenness across cylinders is the headline, not the top figure.</strong></p>
+<p>Readings vary legitimately between engine models, between gauges, and with test conditions — engine temperature, cranking speed, throttle position, even battery strength. That's why there is no honest universal number anyone can give you for "good compression" on an engine they haven't tested, and why I won't print one here. The figure that matters for a specific engine is the specification in that manufacturer's data, which a dealer can check against the serial number.</p>
+<p>What you can judge from any set of results is the spread. Cylinders that read close to one another suggest an engine wearing evenly. One cylinder reading clearly lower than the rest is the finding that matters — it points at a problem in that cylinder specifically, and it's the pattern a technician will chase first. A set of readings that are all low and even tells a different story: general wear, or test conditions worth questioning before condemning the engine.</p>
+<p>So when a seller hands you results, ask for all the cylinders, not the best one. And if the numbers come from a gauge of unknown history on a cold engine, treat them as a rough indication — a proper test, done properly, is what you negotiate on.</p>
+<h2>What uneven readings can point to</h2>
+<p>A low cylinder is a symptom, not a diagnosis. The usual suspects include:</p>
+<ul>
+<li><strong>Worn or stuck piston rings</strong>, letting pressure slip past the piston.</li>
+<li><strong>Valve problems on four-strokes</strong> — a valve that isn't sealing fully leaks compression just as surely as worn rings.</li>
+<li><strong>A failing head gasket</strong>, which can leak between cylinders or into the cooling passages.</li>
+<li><strong>Cylinder wall damage</strong> — scoring from overheating, debris or a past lubrication failure.</li>
+</ul>
+<p>Notice the range there: some are expensive, some are very expensive, and none of them can be confirmed by the compression gauge alone. Which brings us to the follow-up test.</p>
+<h2>The leak-down test: the follow-up that finds the leak</h2>
+<p>When compression is low or uneven, the next step is usually a leak-down test. Instead of cranking, the technician feeds a measured amount of compressed air into the cylinder and measures how much escapes — and, by listening and checking where the air comes out, works out <em>where</em> it's escaping. Air hissing from the intake, the exhaust, the crankcase or the cooling system each points in a different direction.</p>
+<p>You don't need to run one yourself. You need to know it exists, because "it needs a leak-down test to know more" is a legitimate, honest answer from a shop — and because a seller's engine with one low cylinder isn't automatically scrap. It's an engine that needs a diagnosis before it needs a price.</p>
+<h2>While you're there: the lower unit tells its own story</h2>
+<p>Compression covers the powerhead. The lower unit — the gearbox at the bottom of the outboard — has its own short list of checks that belong in the same conversation:</p>
+<ul>
+<li><strong>Gear oil condition.</strong> When the drain plug comes out, the oil should look like oil. Milky, coffee-coloured oil means water is getting in — seals are letting the lake in and the oil out, and water inside a gearcase corrodes bearings and gears quietly all winter.</li>
+<li><strong>Metal on the magnet.</strong> Drain plugs are magnetic for a reason. A fine grey fuzz of particles is normal wear; chunks, flakes or slivers are not — they're pieces of gear or bearing, and they mean the box is coming apart.</li>
+<li><strong>Pressure and vacuum testing.</strong> A shop can pressurize the gearcase and check whether it holds, and pull a vacuum the same way. A case that won't hold pressure won't keep water out on the water. This is the proper test for seal condition — far more telling than a visual once-over.</li>
+</ul>
+<p>Milky gear oil is one of the most common findings on used outboards I see, and one of the most negotiable: it might be a seal job, it might be a gearcase. That's a diagnosis to price, not a detail to wave past.</p>
+<h2>A buyer's bottom line</h2>
+<p>A compression test is a screening tool, and a good one. Ask whether one has been done, ask for every cylinder's reading, and read the spread before the numbers. If the engine is worth real money and there's no recent test, having one done — along with a gear-oil check — as part of a pre-purchase inspection is normal practice, and good sellers expect it.</p>
+<p>What the test won't do is replace judgement. Even readings, clean gear oil, a cold start that catches cleanly and an engine that runs as it should on the water: that's the combination you're actually buying.</p>
+<h2>Going deeper</h2>
+<p>Compression and lower-unit checks are built into the motor section of the <strong>No. 01 Used Boat &amp; Outboard Buyer Checklist</strong> — alongside the cold start, the telltale, the sea trial and the paperwork — with room to record the readings and a repair-cost estimator for what the findings do to the price.</p>
+<p class="author-line">— Michael Austin, ProCheck — marine sales, Port Coquitlam, BC</p>
+  </article>
+
+    <div class="card featured cta-box">
+      <div class="no">The full guide</div>
+      <h3>No. 01 — Used Boat &amp; Outboard Buyer Checklist</h3>
+      <p>The full inspection system: paperwork and lien checks, hull, motor, trailer and sea trial in sequence, with the /80 scorecard, a repair-cost estimator and the negotiation script. Instant-download PDF.</p>
+      <div class="price">$16.99</div>
+      <div class="buy-row"><a class="buy-etsy" href="https://www.etsy.com/ca/listing/4616790477">Buy on Etsy</a><a class="buy-gum" href="https://procheck.gumroad.com/l/wraoew">Gumroad</a></div>
+    </div>
+  <div class="to-top"><a href="#top">&uarr; Back to top</a></div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div>&copy; 2026 ProCheck — Boat Owner Printables, by Michael Austin &middot; Coquitlam, BC</div>
+    <div><a href="https://procheckmarine.com">PROCHECKMARINE.COM</a></div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var btn = document.getElementById('navToggle');
+    var nav = document.getElementById('site-nav');
+    if(!btn || !nav) return;
+    btn.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        nav.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>
