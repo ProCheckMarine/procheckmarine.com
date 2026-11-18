@@ -1,1 +1,235 @@
-placeholder
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Boat Trade-In Value: How a Dealer Actually Values Your Trade</title>
+<meta name="description" content="The trade-in number on your deal sheet is two numbers in a trench coat. How dealers really value a trade — book value, reconditioning, and the BC tax-on-the-difference lever.">
+<link rel="canonical" href="https://procheckmarine.com/how-dealers-value-boat-trade-ins/">
+<style>
+  :root{
+    --graphite:#2F3437; --gelcoat:#F4F1EA; --slate:#5A6D68; --brass:#A98A5F;
+    --aluminium:#C9CED1; --ink:#222628; --card:#FFFFFF;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; background:var(--gelcoat); color:var(--ink); line-height:1.55;}
+  .wrap{max-width:960px; margin:0 auto; padding:0 20px;}
+  header{background:var(--graphite); color:var(--gelcoat); padding:18px 0;}
+  .header-row{display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;}
+  .brand{display:flex; align-items:center; gap:14px;}
+  .brand svg{width:92px; height:auto; background:var(--gelcoat); border-radius:8px; padding:6px;}
+  .brand-name{font-size:28px; font-weight:800; letter-spacing:3px;}
+  .brand-sub{font-size:12px; letter-spacing:2px; color:var(--aluminium); text-transform:uppercase;}
+  nav a{color:var(--gelcoat); text-decoration:none; font-weight:600; margin-left:18px; font-size:15px;}
+  nav a:hover{color:var(--brass);}
+  .nav-toggle{display:none; background:none; border:1.5px solid var(--slate); color:var(--gelcoat); font-size:15px; font-weight:700; padding:8px 14px; border-radius:8px; cursor:pointer;}
+  .to-top{text-align:right; margin-top:20px;}
+  .to-top a{color:var(--slate); text-decoration:none; font-size:14px; font-weight:600;}
+  .to-top a:hover{color:var(--brass);}
+  .hero{padding:56px 0 40px; text-align:center;}
+  .hero h1{font-size:40px; line-height:1.15; color:var(--graphite); font-weight:800;}
+  .hero h1 .accent{color:var(--brass);}
+  .hero p{max-width:640px; margin:18px auto 0; font-size:18px; color:#444;}
+  .cta-row{display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-top:28px;}
+  .hero-img{width:100%; height:380px; object-fit:cover; object-position:center 42%; border-radius:12px; margin-top:36px; display:block;}
+  .btn{display:inline-block; padding:14px 28px; border-radius:8px; font-weight:700; font-size:16px; text-decoration:none;}
+  .btn-primary{background:var(--brass); color:#fff;}
+  .btn-primary:hover{background:#967950;}
+  .btn-secondary{background:var(--graphite); color:var(--gelcoat);}
+  .btn-secondary:hover{background:#3d4347;}
+  section{padding:36px 0;}
+  h2{font-size:26px; color:var(--graphite); margin-bottom:6px;}
+  .section-sub{color:#555; margin-bottom:22px;}
+  .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(270px,1fr)); gap:16px;}
+  .card{background:var(--card); border:1px solid #E3DED2; border-radius:10px; padding:20px; display:flex; flex-direction:column;}
+  .card .no{font-size:12px; font-weight:700; letter-spacing:2px; color:var(--slate); text-transform:uppercase;}
+  .card h3{font-size:18px; color:var(--graphite); margin:6px 0 8px; line-height:1.3;}
+  .card p{font-size:14.5px; color:#555; flex:1;}
+  .card .price{margin-top:14px; font-weight:800; color:var(--graphite); font-size:17px;}
+  .card img.thumb{width:100%; height:200px; object-fit:cover; object-position:top; border-radius:6px; margin-bottom:12px;}
+  .card .shop-link{margin-top:10px; font-weight:700; font-size:15px;}
+  .card .shop-link a{color:var(--brass); text-decoration:none;}
+  .card .shop-link a:hover{text-decoration:underline;}
+  .card.featured{border:2px solid var(--brass);}
+  .badge{display:inline-block; background:var(--brass); color:#fff; font-size:11px; font-weight:700; letter-spacing:1px; padding:3px 8px; border-radius:4px; text-transform:uppercase;}
+  .badge-soon{background:var(--slate);}
+  .subscribe{background:var(--graphite); color:var(--gelcoat); border-radius:12px; padding:34px 30px;}
+  .subscribe h2{color:var(--gelcoat);}
+  .subscribe p{color:var(--aluminium); max-width:560px;}
+  .subscribe form{display:flex; gap:10px; margin-top:18px; flex-wrap:wrap;}
+  .subscribe input[type=email]{flex:1; min-width:240px; padding:13px 16px; border-radius:8px; border:none; font-size:16px;}
+  .subscribe button{padding:13px 24px; border:none; border-radius:8px; background:var(--brass); color:#fff; font-weight:700; font-size:16px; cursor:pointer;}
+  .follow-row{display:flex; gap:10px; flex-wrap:wrap; margin-top:20px;}
+  .follow-row a{color:var(--gelcoat); border:1px solid var(--slate); padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14.5px; font-weight:600;}
+  .follow-row a:hover{border-color:var(--brass); color:var(--brass);}
+  .about p{max-width:700px; color:#444; margin-bottom:12px;}
+  footer{background:var(--graphite); color:var(--aluminium); padding:26px 0; margin-top:20px; font-size:14px;}
+  footer .wrap{display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;}
+  footer a{color:var(--gelcoat); text-decoration:none;}
+  .topbar-signup{display:flex; align-items:center; gap:14px; flex-wrap:wrap; border-top:1px solid #454b4f; margin-top:14px; padding-top:14px;}
+  .topbar-signup .tb-label{font-size:14.5px; font-weight:600; color:var(--gelcoat);}
+  .topbar-signup form{display:flex; gap:8px; flex:1; min-width:260px;}
+  .topbar-signup input[type=email]{flex:1; padding:10px 14px; border-radius:8px; border:none; font-size:15px; min-width:180px;}
+  .topbar-signup button{padding:10px 20px; border:none; border-radius:8px; background:var(--brass); color:#fff; font-weight:700; font-size:15px; cursor:pointer;}
+  .buy-row{display:flex; gap:8px; flex-wrap:wrap; margin-top:12px;}
+  .buy-row a{text-decoration:none; font-size:14px; font-weight:700; padding:8px 14px; border-radius:6px;}
+  .buy-etsy{background:var(--brass); color:#fff;}
+  .buy-etsy:hover{background:#967950;}
+  .buy-gum{border:1.5px solid var(--graphite); color:var(--graphite);}
+  .buy-gum:hover{background:var(--graphite); color:var(--gelcoat);}
+  .buy-release{border:1.5px solid var(--slate); color:var(--slate);}
+  .contact-form{max-width:640px;}
+  .contact-form label{display:block; font-weight:600; font-size:14.5px; color:var(--graphite); margin:14px 0 5px;}
+  .contact-form input[type=text], .contact-form input[type=email], .contact-form textarea{width:100%; padding:12px 14px; border:1px solid #CFC9BA; border-radius:8px; font-size:16px; font-family:inherit; background:#fff;}
+  .contact-form textarea{min-height:130px; resize:vertical;}
+  .contact-form button{margin-top:16px; padding:13px 26px; border:none; border-radius:8px; background:var(--brass); color:#fff; font-weight:700; font-size:16px; cursor:pointer;}
+  .contact-form button:hover{background:#967950;}
+  .about-photos{display:flex; gap:16px; flex-wrap:wrap; margin:6px 0 18px;}
+  .about-photos figure{margin:0;}
+  .about-photos img{height:250px; width:auto; border-radius:10px; display:block;}
+  .about-photos figcaption{font-size:13px; color:#777; margin-top:6px;}
+  @media (max-width:700px){
+    .nav-toggle{display:block;}
+    nav{display:none; width:100%; flex-direction:column; padding-top:6px;}
+    nav.open{display:flex;}
+    nav a{margin:0; padding:10px 2px; border-top:1px solid #454b4f; font-size:16px;}
+  }
+  @media (max-width:560px){ .hero h1{font-size:31px;} .brand-name{font-size:22px;} .hero-img{height:230px;} .about-photos img{height:200px;} }
+
+  .article{padding:42px 0 8px; max-width:760px;}
+  .article h1{font-size:34px; line-height:1.2; color:var(--graphite); font-weight:800; margin-bottom:18px;}
+  .article h2{margin:32px 0 10px;}
+  .article h3{font-size:19px; color:var(--graphite); margin:24px 0 8px;}
+  .article p{margin-bottom:14px; color:#333;}
+  .article ul,.article ol{margin:0 0 16px 22px;}
+  .article li{margin-bottom:7px; color:#333;}
+  .article a{color:var(--slate); font-weight:600;}
+  .article a:hover{color:var(--brass);}
+  .article hr{border:none; border-top:1px solid #E3DED2; margin:28px 0;}
+  .article .author-line{font-weight:700; color:var(--graphite); margin-top:22px;}
+  .article li.check{list-style:none; margin-left:-22px;}
+  .article input[type=checkbox]{width:16px; height:16px; margin-right:8px; vertical-align:-2px; accent-color:var(--brass);}
+  .sources{background:var(--card); border:1px solid #E3DED2; border-radius:10px; padding:20px 22px; margin:30px 0 6px;}
+  .sources h2{font-size:20px; margin:0 0 10px;}
+  .sources ul{margin:0 0 0 20px;}
+  .sources li{margin-bottom:6px;}
+  .cta-box{margin:30px 0 8px; max-width:760px;}
+  @media (max-width:560px){ .article h1{font-size:27px;} }
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="wrap header-row">
+    <a class="brand" href="/" style="text-decoration:none;color:inherit;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 58" aria-label="ProCheck logo"><path d="M22 16 Q70 -7 112 22" fill="none" stroke="#2F3437" stroke-width="4" stroke-linecap="round"/><path d="M24 44 Q68 64 112 38" fill="none" stroke="#2F3437" stroke-width="3.5" stroke-linecap="round"/><line x1="21" y1="30" x2="116" y2="30" stroke="#5A6D68" stroke-width="2.5"/><rect x="2" y="20" width="19" height="19" rx="5" fill="#2F3437"/><circle cx="66" cy="30" r="6" fill="#A98A5F"/></svg>
+      <div>
+        <div class="brand-name">PROCHECK</div>
+        <div class="brand-sub">Boat Owner Printables</div>
+      </div>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="site-nav">&#9776; Menu</button>
+    <nav id="site-nav">
+      <a href="/#guides">The Guides</a>
+      <a href="/#merch">Merch</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+  <div class="wrap">
+    <div class="topbar-signup" id="releaselist">
+      <span class="tb-label">New guides, first — join the release list:</span>
+      <!-- TODO at deploy: point this form at the email-list provider (same list as the subscribe form below). -->
+      <form action="https://formspree.io/f/meaggjrn" method="post">
+        <input type="email" name="email" placeholder="you@example.com" required>
+        <button type="submit">Notify me</button>
+      </form>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <article class="article">
+<h1>Boat Trade-In Value: How a Dealer Actually Values Your Trade</h1>
+<p>Every trade-in appraisal ends with a number, and most sellers hear that number as a verdict on their boat. It isn't. It's a business calculation — what the dealer believes the boat can be resold for, minus everything it will cost to get it sold, minus a margin for the risk that they're wrong. I do this at a sales desk in BC. Here's the calculation, in the order it actually happens.</p>
+<h2>It starts with what the boat will sell for, not what you paid</h2>
+<p>The first figure a dealer builds is the expected resale price, and it comes from evidence, not sentiment:</p>
+<ul>
+<li><strong>Book and wholesale guides</strong> give a starting range for the make, model and year. They're a floor-setting tool, not gospel — books lag the market and can't see condition.</li>
+<li><strong>Recent comparables</strong> — what similar boats have actually sold for, lately, in this region — carry more weight than any guide. A boat that's common in BC waters prices differently here than the same boat priced off listings three provinces away.</li>
+<li><strong>Season</strong> moves the number more than sellers expect. The same boat appraised in April, when buyers are competing, and in October, when the dealer will carry it through winter, are two different numbers — because one of them includes months of storage, interest and lot space before it can sell.</li>
+</ul>
+<h2>Then the walk-around takes its cut</h2>
+<p>Next, the boat gets appraised as a physical object. This is where hours and condition stop being descriptions and become deductions:</p>
+<ul>
+<li><strong>Engine hours</strong> — and whether they're verifiable. Hours on a dash gauge are a claim; hours read from the engine's own computer are evidence. A boat with documented hours prices stronger than the same boat with a story.</li>
+<li><strong>Condition findings</strong> — soft decks, tired canvas, trailer brakes and bearings, electronics that don't power up, gelcoat damage, a lower unit that needs seals. Each one is a repair bill the dealer either pays or prices around.</li>
+<li><strong>Reconditioning cost</strong> — the detail, the service, the safety items, the repairs above. This is estimated honestly, because underestimating it means the dealership eats it later.</li>
+<li><strong>Carrying and selling costs</strong> — advertising, lot space, insurance, interest on the money tied up in the boat while it waits for its buyer, and the salesperson's time. Invisible to you; very visible on the appraisal sheet.</li>
+</ul>
+<p>Resale price minus reconditioning minus carrying costs minus a risk margin is, near enough, your boat's <strong>actual cash value</strong> to the dealer: what the trade is genuinely worth to the business.</p>
+<h2>The number on your deal sheet may not be that number</h2>
+<p>Here's the part worth understanding. The <strong>trade allowance</strong> printed on your deal — the figure beside your old boat's name — is sometimes higher than the actual cash value. The difference is called an <strong>overallowance</strong>, and it's not generosity. It's discount moved from one column to another: the dealer shows you more for your trade and gives up less on the new boat's price.</p>
+<p>Why does this matter? Because it makes trade numbers impossible to compare between dealers on their own. One dealer offers you $15,000 for your trade against a firm price on the new boat; another offers $17,000 and won't move a dollar on theirs. The second offer <em>sounds</em> $2,000 better and may be worth less. The only honest comparison is the <strong>difference</strong>: the amount you pay on top of your trade, out the door. Compare differences, never allowances.</p>
+<h2>How to get a fair number</h2>
+<p>You can't change your boat's age or hours, but the appraisal isn't fixed either:</p>
+<ul>
+<li><strong>Present it clean.</strong> A washed, emptied, presentable boat appraises like a boat that was looked after. A boat full of last season's gear and a green scum line appraises like a project. Same boat — different first five minutes.</li>
+<li><strong>Bring the service records.</strong> A documented service history does two things: it reduces the dealer's reconditioning unknowns, and it will raise the boat's resale price to the <em>next</em> buyer, which feeds straight back into the first line of the calculation. Records are the cheapest value you can add to a trade.</li>
+<li><strong>Fix the small, obvious things.</strong> A dead battery, a flat trailer tire, a bilge pump that doesn't run — each is a small bill for you and a question mark for the appraiser. Question marks get priced as worst cases.</li>
+<li><strong>Time it if you can.</strong> Trading into the spring market, when the dealer can turn the boat quickly, is worth more than trading the same boat into the fall.</li>
+</ul>
+<h2>The BC lever most sellers miss: tax on the difference</h2>
+<p>In BC, when you buy from a dealer and trade a boat in as part of the same deal, <strong>tax is calculated on the price difference</strong> — the new boat's price minus your trade allowance — not on the full price. (This applies to a dealer purchase; a private sale is a different tax situation entirely.)</p>
+<p>A worked example, with round numbers, for illustration only:</p>
+<ul>
+<li>New boat price: <strong>$40,000</strong></li>
+<li>Your trade allowance: <strong>$15,000</strong></li>
+<li>Taxable amount: <strong>$25,000</strong> — the difference</li>
+<li>Without the trade, the taxable amount would be the full $40,000. The trade takes $15,000 straight off the amount you're taxed on, on top of the $15,000 itself coming off the price.</li>
+</ul>
+<p>That's real money, and it changes the private-sale comparison more than sellers expect. Selling your old boat privately for a bit more than the trade allowance can still leave you behind once you've paid tax on the full price of the new boat — run both sets of numbers, on the difference, before you decide the dealer's number is low.</p>
+<hr />
+<h2>Both sides of the desk, in one guide</h2>
+<p>Valuation is one half of a trade-in deal; the other half is how the numbers are presented, negotiated and written up. <strong>No. 06, Buy It Like a Dealer Sells It</strong> covers the whole dealer purchase — pricing, fees, trade-ins, deposits and delivery day — from the side of the counter where the appraisal sheet lives.</p>
+<p class="author-line">— Michael Austin, ProCheck — marine sales, Port Coquitlam, BC</p>
+  </article>
+
+    <div class="card featured cta-box">
+      <div class="no">The full guide</div>
+      <h3>No. 06 — Buy It Like a Dealer Sells It</h3>
+      <p>The whole dealer purchase from the other side of the desk — pricing, fees, trade-ins, deposits and delivery day. Instant-download PDF.</p>
+      <div class="price">$16.99</div>
+      <div class="buy-row"><a class="buy-etsy" href="https://www.etsy.com/ca/listing/4618312270">Buy on Etsy</a><a class="buy-gum" href="https://procheck.gumroad.com/l/xaafp">Gumroad</a></div>
+    </div>
+  <div class="to-top"><a href="#top">&uarr; Back to top</a></div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div>&copy; 2026 ProCheck — Boat Owner Printables, by Michael Austin &middot; Coquitlam, BC</div>
+    <div><a href="https://procheckmarine.com">PROCHECKMARINE.COM</a></div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var btn = document.getElementById('navToggle');
+    var nav = document.getElementById('site-nav');
+    if(!btn || !nav) return;
+    btn.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        nav.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>
