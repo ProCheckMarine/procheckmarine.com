@@ -1,1 +1,244 @@
-placeholder
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Buying a Used Boat in BC: Licence Transfer, Bill of Sale &amp; the 12% PST</title>
+<meta name="description" content="Bought a used boat privately in BC? The paperwork that actually matters: the 30-day licence transfer, a proper bill of sale, and the 12% PST nobody warns you about.">
+<link rel="canonical" href="https://procheckmarine.com/buying-a-used-boat-in-bc-paperwork/">
+<style>
+  :root{
+    --graphite:#2F3437; --gelcoat:#F4F1EA; --slate:#5A6D68; --brass:#A98A5F;
+    --aluminium:#C9CED1; --ink:#222628; --card:#FFFFFF;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; background:var(--gelcoat); color:var(--ink); line-height:1.55;}
+  .wrap{max-width:960px; margin:0 auto; padding:0 20px;}
+  header{background:var(--graphite); color:var(--gelcoat); padding:18px 0;}
+  .header-row{display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;}
+  .brand{display:flex; align-items:center; gap:14px;}
+  .brand svg{width:92px; height:auto; background:var(--gelcoat); border-radius:8px; padding:6px;}
+  .brand-name{font-size:28px; font-weight:800; letter-spacing:3px;}
+  .brand-sub{font-size:12px; letter-spacing:2px; color:var(--aluminium); text-transform:uppercase;}
+  nav a{color:var(--gelcoat); text-decoration:none; font-weight:600; margin-left:18px; font-size:15px;}
+  nav a:hover{color:var(--brass);}
+  .nav-toggle{display:none; background:none; border:1.5px solid var(--slate); color:var(--gelcoat); font-size:15px; font-weight:700; padding:8px 14px; border-radius:8px; cursor:pointer;}
+  .to-top{text-align:right; margin-top:20px;}
+  .to-top a{color:var(--slate); text-decoration:none; font-size:14px; font-weight:600;}
+  .to-top a:hover{color:var(--brass);}
+  .hero{padding:56px 0 40px; text-align:center;}
+  .hero h1{font-size:40px; line-height:1.15; color:var(--graphite); font-weight:800;}
+  .hero h1 .accent{color:var(--brass);}
+  .hero p{max-width:640px; margin:18px auto 0; font-size:18px; color:#444;}
+  .cta-row{display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-top:28px;}
+  .hero-img{width:100%; height:380px; object-fit:cover; object-position:center 42%; border-radius:12px; margin-top:36px; display:block;}
+  .btn{display:inline-block; padding:14px 28px; border-radius:8px; font-weight:700; font-size:16px; text-decoration:none;}
+  .btn-primary{background:var(--brass); color:#fff;}
+  .btn-primary:hover{background:#967950;}
+  .btn-secondary{background:var(--graphite); color:var(--gelcoat);}
+  .btn-secondary:hover{background:#3d4347;}
+  section{padding:36px 0;}
+  h2{font-size:26px; color:var(--graphite); margin-bottom:6px;}
+  .section-sub{color:#555; margin-bottom:22px;}
+  .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(270px,1fr)); gap:16px;}
+  .card{background:var(--card); border:1px solid #E3DED2; border-radius:10px; padding:20px; display:flex; flex-direction:column;}
+  .card .no{font-size:12px; font-weight:700; letter-spacing:2px; color:var(--slate); text-transform:uppercase;}
+  .card h3{font-size:18px; color:var(--graphite); margin:6px 0 8px; line-height:1.3;}
+  .card p{font-size:14.5px; color:#555; flex:1;}
+  .card .price{margin-top:14px; font-weight:800; color:var(--graphite); font-size:17px;}
+  .card img.thumb{width:100%; height:200px; object-fit:cover; object-position:top; border-radius:6px; margin-bottom:12px;}
+  .card .shop-link{margin-top:10px; font-weight:700; font-size:15px;}
+  .card .shop-link a{color:var(--brass); text-decoration:none;}
+  .card .shop-link a:hover{text-decoration:underline;}
+  .card.featured{border:2px solid var(--brass);}
+  .badge{display:inline-block; background:var(--brass); color:#fff; font-size:11px; font-weight:700; letter-spacing:1px; padding:3px 8px; border-radius:4px; text-transform:uppercase;}
+  .badge-soon{background:var(--slate);}
+  .subscribe{background:var(--graphite); color:var(--gelcoat); border-radius:12px; padding:34px 30px;}
+  .subscribe h2{color:var(--gelcoat);}
+  .subscribe p{color:var(--aluminium); max-width:560px;}
+  .subscribe form{display:flex; gap:10px; margin-top:18px; flex-wrap:wrap;}
+  .subscribe input[type=email]{flex:1; min-width:240px; padding:13px 16px; border-radius:8px; border:none; font-size:16px;}
+  .subscribe button{padding:13px 24px; border:none; border-radius:8px; background:var(--brass); color:#fff; font-weight:700; font-size:16px; cursor:pointer;}
+  .follow-row{display:flex; gap:10px; flex-wrap:wrap; margin-top:20px;}
+  .follow-row a{color:var(--gelcoat); border:1px solid var(--slate); padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14.5px; font-weight:600;}
+  .follow-row a:hover{border-color:var(--brass); color:var(--brass);}
+  .about p{max-width:700px; color:#444; margin-bottom:12px;}
+  footer{background:var(--graphite); color:var(--aluminium); padding:26px 0; margin-top:20px; font-size:14px;}
+  footer .wrap{display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;}
+  footer a{color:var(--gelcoat); text-decoration:none;}
+  .topbar-signup{display:flex; align-items:center; gap:14px; flex-wrap:wrap; border-top:1px solid #454b4f; margin-top:14px; padding-top:14px;}
+  .topbar-signup .tb-label{font-size:14.5px; font-weight:600; color:var(--gelcoat);}
+  .topbar-signup form{display:flex; gap:8px; flex:1; min-width:260px;}
+  .topbar-signup input[type=email]{flex:1; padding:10px 14px; border-radius:8px; border:none; font-size:15px; min-width:180px;}
+  .topbar-signup button{padding:10px 20px; border:none; border-radius:8px; background:var(--brass); color:#fff; font-weight:700; font-size:15px; cursor:pointer;}
+  .buy-row{display:flex; gap:8px; flex-wrap:wrap; margin-top:12px;}
+  .buy-row a{text-decoration:none; font-size:14px; font-weight:700; padding:8px 14px; border-radius:6px;}
+  .buy-etsy{background:var(--brass); color:#fff;}
+  .buy-etsy:hover{background:#967950;}
+  .buy-gum{border:1.5px solid var(--graphite); color:var(--graphite);}
+  .buy-gum:hover{background:var(--graphite); color:var(--gelcoat);}
+  .buy-release{border:1.5px solid var(--slate); color:var(--slate);}
+  .contact-form{max-width:640px;}
+  .contact-form label{display:block; font-weight:600; font-size:14.5px; color:var(--graphite); margin:14px 0 5px;}
+  .contact-form input[type=text], .contact-form input[type=email], .contact-form textarea{width:100%; padding:12px 14px; border:1px solid #CFC9BA; border-radius:8px; font-size:16px; font-family:inherit; background:#fff;}
+  .contact-form textarea{min-height:130px; resize:vertical;}
+  .contact-form button{margin-top:16px; padding:13px 26px; border:none; border-radius:8px; background:var(--brass); color:#fff; font-weight:700; font-size:16px; cursor:pointer;}
+  .contact-form button:hover{background:#967950;}
+  .about-photos{display:flex; gap:16px; flex-wrap:wrap; margin:6px 0 18px;}
+  .about-photos figure{margin:0;}
+  .about-photos img{height:250px; width:auto; border-radius:10px; display:block;}
+  .about-photos figcaption{font-size:13px; color:#777; margin-top:6px;}
+  @media (max-width:700px){
+    .nav-toggle{display:block;}
+    nav{display:none; width:100%; flex-direction:column; padding-top:6px;}
+    nav.open{display:flex;}
+    nav a{margin:0; padding:10px 2px; border-top:1px solid #454b4f; font-size:16px;}
+  }
+  @media (max-width:560px){ .hero h1{font-size:31px;} .brand-name{font-size:22px;} .hero-img{height:230px;} .about-photos img{height:200px;} }
+
+  .article{padding:42px 0 8px; max-width:760px;}
+  .article h1{font-size:34px; line-height:1.2; color:var(--graphite); font-weight:800; margin-bottom:18px;}
+  .article h2{margin:32px 0 10px;}
+  .article h3{font-size:19px; color:var(--graphite); margin:24px 0 8px;}
+  .article p{margin-bottom:14px; color:#333;}
+  .article ul,.article ol{margin:0 0 16px 22px;}
+  .article li{margin-bottom:7px; color:#333;}
+  .article a{color:var(--slate); font-weight:600;}
+  .article a:hover{color:var(--brass);}
+  .article hr{border:none; border-top:1px solid #E3DED2; margin:28px 0;}
+  .article .author-line{font-weight:700; color:var(--graphite); margin-top:22px;}
+  .article li.check{list-style:none; margin-left:-22px;}
+  .article input[type=checkbox]{width:16px; height:16px; margin-right:8px; vertical-align:-2px; accent-color:var(--brass);}
+  .sources{background:var(--card); border:1px solid #E3DED2; border-radius:10px; padding:20px 22px; margin:30px 0 6px;}
+  .sources h2{font-size:20px; margin:0 0 10px;}
+  .sources ul{margin:0 0 0 20px;}
+  .sources li{margin-bottom:6px;}
+  .cta-box{margin:30px 0 8px; max-width:760px;}
+  @media (max-width:560px){ .article h1{font-size:27px;} }
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="wrap header-row">
+    <a class="brand" href="/" style="text-decoration:none;color:inherit;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 58" aria-label="ProCheck logo"><path d="M22 16 Q70 -7 112 22" fill="none" stroke="#2F3437" stroke-width="4" stroke-linecap="round"/><path d="M24 44 Q68 64 112 38" fill="none" stroke="#2F3437" stroke-width="3.5" stroke-linecap="round"/><line x1="21" y1="30" x2="116" y2="30" stroke="#5A6D68" stroke-width="2.5"/><rect x="2" y="20" width="19" height="19" rx="5" fill="#2F3437"/><circle cx="66" cy="30" r="6" fill="#A98A5F"/></svg>
+      <div>
+        <div class="brand-name">PROCHECK</div>
+        <div class="brand-sub">Boat Owner Printables</div>
+      </div>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="site-nav">&#9776; Menu</button>
+    <nav id="site-nav">
+      <a href="/#guides">The Guides</a>
+      <a href="/#merch">Merch</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+  <div class="wrap">
+    <div class="topbar-signup" id="releaselist">
+      <span class="tb-label">New guides, first — join the release list:</span>
+      <!-- TODO at deploy: point this form at the email-list provider (same list as the subscribe form below). -->
+      <form action="https://formspree.io/f/meaggjrn" method="post">
+        <input type="email" name="email" placeholder="you@example.com" required>
+        <button type="submit">Notify me</button>
+      </form>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <article class="article">
+<h1>Buying a Used Boat in BC: Licence Transfer, Bill of Sale &amp; the 12% PST</h1>
+<p>The handshake is the easy part. What catches BC buyers out is the paperwork that follows a private boat sale — a federal licence transfer with a deadline most people have wrong, a provincial tax bill nobody mentions at the dock, and a trailer that gets taxed on a completely different basis than the boat sitting on it. Here is the sequence, in the order you should do it.</p>
+<h2>Step 1: Get a bill of sale that covers the right things</h2>
+<p>There is no BC-government bill of sale form for boats. The content standard that matters is <a href="https://tc.canada.ca/en/marine-transportation/vessel-licensing-registration/pleasure-craft-licensing">Transport Canada's</a>, because your bill of sale is the proof of ownership you'll use for the licence transfer — and for the tax step below.</p>
+<p>Transport Canada requires a <a href="https://tc.canada.ca/node/37405">proof-of-ownership document</a> to include:</p>
+<ul>
+<li>The seller's name, address and signature</li>
+<li>Your name and signature, as the new owner</li>
+<li>A description of the craft (make, model, colour)</li>
+<li>The hull serial number (HIN), if available</li>
+<li>The Pleasure Craft Licence number, if the boat is already licensed</li>
+</ul>
+<p>On top of that core, add the items Transport Canada doesn't list but that protect you in practice: the date of sale, the purchase price, the outboard's serial number, the trailer's VIN, and a statement from the seller that the boat is sold free of liens. The date matters because two clocks start at the ownership change (see below). The price matters because BC calculates your PST on it. The serial numbers matter because they're what <a href="https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/bc-registry-services-personal-property-registry">a lien search</a> runs on — a boat package is really three searches: hull, motor and trailer.</p>
+<h2>Step 2: Transfer the Pleasure Craft Licence within 30 days</h2>
+<p>If the boat already has a Canadian Pleasure Craft Licence (PCL), the number stays with the boat for its entire life. The seller should <strong>not</strong> cancel it — your job is to transfer it into your name.</p>
+<p>The deadline is <strong>30 days from the ownership change</strong>, and you must transfer before operating the boat. You may still see 90 days quoted on older pages and registry-service sites; that was the old rule, and it changed at the end of 2025. Work to 30.</p>
+<p>To transfer, you'll need ID for all owners, your proof of ownership (the bill of sale from Step 1), and a current colour photo of the boat's full side view. The transfer fee is $24. <a href="https://tc.canada.ca/en/marine-transportation/vessel-licensing-registration/licensing-pleasure-craft/apply-manage-pleasure-craft-licence-pcl/how-apply">Apply online</a> and Transport Canada emails you a temporary licence, valid 30 days, so you can use the boat right away; the permanent licence carries the same number. New, transferred and renewed licences are now valid for five years. Keep the licence document on board — that's a requirement, not a suggestion — and know that operating without a valid licence can draw a $250 fine.</p>
+<p>One thing a PCL is <strong>not</strong>: proof of ownership. Transport Canada says so in plain language — like a car's licence plate, it's identification. The document that actually evidences your purchase is your bill of sale, so file the original somewhere safe.</p>
+<h2>Step 3: Pay the BC PST — 12% on a private sale</h2>
+<p>This is the step that surprises people. Buy a boat privately in BC and you owe <a href="https://www2.gov.bc.ca/assets/gov/taxes/sales-taxes/publications/pst-108-boats.pdf"><strong>12% PST</strong></a> on the purchase price, including accessories. Gear that comes with the boat — motors, fishing gear, water-sport equipment — is taxed at the same rate as the boat, even if it's listed separately on your bill of sale.</p>
+<p>Nobody collects this from you at the point of sale, because in a private sale there's no collector. You self-assess: if you don't have a PST number (most buyers don't), you file a Casual Remittance Return (FIN 405) and pay <strong>on or before the last day of the month following the month you obtained the boat</strong>.</p>
+<p>Don't treat that deadline casually. The province has said it routinely matches Transport Canada's ownership-change records against PST payments — so the licence transfer in Step 2 is exactly what can trigger a letter asking you to confirm you paid. The two steps are connected whether you like it or not.</p>
+<p>Buying from a dealer instead? A purchase from a GST registrant carries <strong>7% PST</strong>, collected by the dealer — one of the quieter differences between the private and dealer routes.</p>
+<h2>Step 4: Deal with the trailer separately</h2>
+<p>The trailer is not taxed like the boat. Trailers fall under BC's vehicle PST rules, not the boat rules in the same bulletin. If PST wasn't paid on the trailer at purchase, ICBC will charge it when you register the trailer. Keep your receipt and the ICBC Transfer/Tax Form (APV9T) as your proof of payment.</p>
+<p>Practical upshot: when you're writing up the deal, it helps to show the boat, motor and trailer as separate line items with their own values. It makes the tax treatment of each piece cleaner, and it matches how the searches and registrations actually work.</p>
+<h2>Bought the boat outside BC?</h2>
+<p>The tax follows the boat into the province:</p>
+<ul>
+<li><strong>Private sale elsewhere in Canada, brought into BC:</strong> 12% on the <em>depreciated</em> purchase price. The depreciated value can't fall below 50% of the purchase price; depreciation runs at 15% per year plus 1.25% per 30 days for part years.</li>
+<li><strong>Dealer purchase elsewhere in Canada:</strong> 7% on the depreciated purchase price.</li>
+<li><strong>Brought in from outside Canada:</strong> 7% on the taxable value. Customs may collect at the border; if they don't, you self-assess the same way as above.</li>
+<li><strong>A gift:</strong> generally 12% on fair market value, with 7% applying in specific cases.</li>
+</ul>
+<h2>Licensed or registered — know which one your boat is</h2>
+<p>Most BC pleasure craft are <em>licensed</em> (the PCL system above). Some are <em>registered</em> in the <a href="https://tc.canada.ca/en/marine-transportation/vessel-licensing-registration/apply-manage-vessel-registration">Canadian Register of Vessels</a>, which is a different thing entirely: Transport Canada describes the register as a title system, and it's the only place a marine mortgage can be recorded. Registration is voluntary for a pleasure craft unless a trigger applies — the common ones are a lender requiring a registered mortgage, or wanting a reserved name for the boat. If you're buying a registered vessel, the transfer process is different from everything on this page, and it's worth getting the details before money moves.</p>
+<h2>The short version</h2>
+<p>Bill of sale with the right contents on day one. Licence transferred within 30 days. FIN 405 filed and 12% PST paid by the end of the following month. Trailer sorted at ICBC. Do those four things and the paperwork side of a BC private purchase is genuinely finished.</p>
+<hr />
+<h2>Get the free checklist — and the full inspection system</h2>
+<p>The one-page version of this page is the <a href="/#releaselist"><strong>free ProCheck BC Paperwork Checklist</strong></a> — the four steps above as a tick-box sheet for the day you buy. And before the paperwork even starts, the boat itself needs a proper look: <strong>No. 01, the Used Boat &amp; Outboard Buyer Checklist</strong>, walks the hull, motor, trailer and sea trial in the order a dealer would, with the lien checks and paperwork built into the same sequence.</p>
+<p class="author-line">— Michael Austin, ProCheck — marine sales, Port Coquitlam, BC</p>
+  </article>
+    <div class="sources">
+      <h2>Official sources</h2>
+      <ul>
+        <li><a href="https://tc.canada.ca/en/marine-transportation/vessel-licensing-registration/pleasure-craft-licensing">Transport Canada — Pleasure Craft Licensing</a></li>
+        <li><a href="https://tc.canada.ca/en/marine-transportation/vessel-licensing-registration/licensing-pleasure-craft/apply-manage-pleasure-craft-licence-pcl/how-apply">Transport Canada — Apply for or manage a Pleasure Craft Licence (PCL)</a></li>
+        <li><a href="https://tc.canada.ca/en/marine-transportation/vessel-licensing-registration/apply-manage-vessel-registration">Transport Canada — Apply for or manage a vessel registration</a></li>
+        <li><a href="https://www2.gov.bc.ca/assets/gov/taxes/sales-taxes/publications/pst-108-boats.pdf">BC Bulletin PST 108 — Boats (PDF)</a></li>
+        <li><a href="https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/bc-registry-services-personal-property-registry">BC Personal Property Registry — personal property liens and searches</a></li>
+      </ul>
+    </div>
+
+    <div class="card featured cta-box">
+      <div class="no">The full guide</div>
+      <h3>No. 01 — Used Boat &amp; Outboard Buyer Checklist</h3>
+      <p>The full inspection system: paperwork and lien checks, hull, motor, trailer and sea trial in sequence, with the /80 scorecard, a repair-cost estimator and the negotiation script. Instant-download PDF.</p>
+      <div class="price">$16.99</div>
+      <div class="buy-row"><a class="buy-etsy" href="https://www.etsy.com/ca/listing/4616790477">Buy on Etsy</a><a class="buy-gum" href="https://procheck.gumroad.com/l/wraoew">Gumroad</a></div>
+    </div>
+  <div class="to-top"><a href="#top">&uarr; Back to top</a></div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div>&copy; 2026 ProCheck — Boat Owner Printables, by Michael Austin &middot; Coquitlam, BC</div>
+    <div><a href="https://procheckmarine.com">PROCHECKMARINE.COM</a></div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var btn = document.getElementById('navToggle');
+    var nav = document.getElementById('site-nav');
+    if(!btn || !nav) return;
+    btn.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        nav.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>
