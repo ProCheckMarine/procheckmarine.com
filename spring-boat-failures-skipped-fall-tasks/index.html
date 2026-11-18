@@ -1,1 +1,232 @@
-placeholder
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spring Boat Failures That Start With One Skipped Fall Task</title>
+<meta name="description" content="Every spring the service desk sees the same failures — and almost all of them started with one fall task that got skipped. Here is the cause and the effect.">
+<link rel="canonical" href="https://procheckmarine.com/spring-boat-failures-skipped-fall-tasks/">
+<style>
+  :root{
+    --graphite:#2F3437; --gelcoat:#F4F1EA; --slate:#5A6D68; --brass:#A98A5F;
+    --aluminium:#C9CED1; --ink:#222628; --card:#FFFFFF;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; background:var(--gelcoat); color:var(--ink); line-height:1.55;}
+  .wrap{max-width:960px; margin:0 auto; padding:0 20px;}
+  header{background:var(--graphite); color:var(--gelcoat); padding:18px 0;}
+  .header-row{display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;}
+  .brand{display:flex; align-items:center; gap:14px;}
+  .brand svg{width:92px; height:auto; background:var(--gelcoat); border-radius:8px; padding:6px;}
+  .brand-name{font-size:28px; font-weight:800; letter-spacing:3px;}
+  .brand-sub{font-size:12px; letter-spacing:2px; color:var(--aluminium); text-transform:uppercase;}
+  nav a{color:var(--gelcoat); text-decoration:none; font-weight:600; margin-left:18px; font-size:15px;}
+  nav a:hover{color:var(--brass);}
+  .nav-toggle{display:none; background:none; border:1.5px solid var(--slate); color:var(--gelcoat); font-size:15px; font-weight:700; padding:8px 14px; border-radius:8px; cursor:pointer;}
+  .to-top{text-align:right; margin-top:20px;}
+  .to-top a{color:var(--slate); text-decoration:none; font-size:14px; font-weight:600;}
+  .to-top a:hover{color:var(--brass);}
+  .hero{padding:56px 0 40px; text-align:center;}
+  .hero h1{font-size:40px; line-height:1.15; color:var(--graphite); font-weight:800;}
+  .hero h1 .accent{color:var(--brass);}
+  .hero p{max-width:640px; margin:18px auto 0; font-size:18px; color:#444;}
+  .cta-row{display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-top:28px;}
+  .hero-img{width:100%; height:380px; object-fit:cover; object-position:center 42%; border-radius:12px; margin-top:36px; display:block;}
+  .btn{display:inline-block; padding:14px 28px; border-radius:8px; font-weight:700; font-size:16px; text-decoration:none;}
+  .btn-primary{background:var(--brass); color:#fff;}
+  .btn-primary:hover{background:#967950;}
+  .btn-secondary{background:var(--graphite); color:var(--gelcoat);}
+  .btn-secondary:hover{background:#3d4347;}
+  section{padding:36px 0;}
+  h2{font-size:26px; color:var(--graphite); margin-bottom:6px;}
+  .section-sub{color:#555; margin-bottom:22px;}
+  .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(270px,1fr)); gap:16px;}
+  .card{background:var(--card); border:1px solid #E3DED2; border-radius:10px; padding:20px; display:flex; flex-direction:column;}
+  .card .no{font-size:12px; font-weight:700; letter-spacing:2px; color:var(--slate); text-transform:uppercase;}
+  .card h3{font-size:18px; color:var(--graphite); margin:6px 0 8px; line-height:1.3;}
+  .card p{font-size:14.5px; color:#555; flex:1;}
+  .card .price{margin-top:14px; font-weight:800; color:var(--graphite); font-size:17px;}
+  .card img.thumb{width:100%; height:200px; object-fit:cover; object-position:top; border-radius:6px; margin-bottom:12px;}
+  .card .shop-link{margin-top:10px; font-weight:700; font-size:15px;}
+  .card .shop-link a{color:var(--brass); text-decoration:none;}
+  .card .shop-link a:hover{text-decoration:underline;}
+  .card.featured{border:2px solid var(--brass);}
+  .badge{display:inline-block; background:var(--brass); color:#fff; font-size:11px; font-weight:700; letter-spacing:1px; padding:3px 8px; border-radius:4px; text-transform:uppercase;}
+  .badge-soon{background:var(--slate);}
+  .subscribe{background:var(--graphite); color:var(--gelcoat); border-radius:12px; padding:34px 30px;}
+  .subscribe h2{color:var(--gelcoat);}
+  .subscribe p{color:var(--aluminium); max-width:560px;}
+  .subscribe form{display:flex; gap:10px; margin-top:18px; flex-wrap:wrap;}
+  .subscribe input[type=email]{flex:1; min-width:240px; padding:13px 16px; border-radius:8px; border:none; font-size:16px;}
+  .subscribe button{padding:13px 24px; border:none; border-radius:8px; background:var(--brass); color:#fff; font-weight:700; font-size:16px; cursor:pointer;}
+  .follow-row{display:flex; gap:10px; flex-wrap:wrap; margin-top:20px;}
+  .follow-row a{color:var(--gelcoat); border:1px solid var(--slate); padding:9px 16px; border-radius:8px; text-decoration:none; font-size:14.5px; font-weight:600;}
+  .follow-row a:hover{border-color:var(--brass); color:var(--brass);}
+  .about p{max-width:700px; color:#444; margin-bottom:12px;}
+  footer{background:var(--graphite); color:var(--aluminium); padding:26px 0; margin-top:20px; font-size:14px;}
+  footer .wrap{display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;}
+  footer a{color:var(--gelcoat); text-decoration:none;}
+  .topbar-signup{display:flex; align-items:center; gap:14px; flex-wrap:wrap; border-top:1px solid #454b4f; margin-top:14px; padding-top:14px;}
+  .topbar-signup .tb-label{font-size:14.5px; font-weight:600; color:var(--gelcoat);}
+  .topbar-signup form{display:flex; gap:8px; flex:1; min-width:260px;}
+  .topbar-signup input[type=email]{flex:1; padding:10px 14px; border-radius:8px; border:none; font-size:15px; min-width:180px;}
+  .topbar-signup button{padding:10px 20px; border:none; border-radius:8px; background:var(--brass); color:#fff; font-weight:700; font-size:15px; cursor:pointer;}
+  .buy-row{display:flex; gap:8px; flex-wrap:wrap; margin-top:12px;}
+  .buy-row a{text-decoration:none; font-size:14px; font-weight:700; padding:8px 14px; border-radius:6px;}
+  .buy-etsy{background:var(--brass); color:#fff;}
+  .buy-etsy:hover{background:#967950;}
+  .buy-gum{border:1.5px solid var(--graphite); color:var(--graphite);}
+  .buy-gum:hover{background:var(--graphite); color:var(--gelcoat);}
+  .buy-release{border:1.5px solid var(--slate); color:var(--slate);}
+  .contact-form{max-width:640px;}
+  .contact-form label{display:block; font-weight:600; font-size:14.5px; color:var(--graphite); margin:14px 0 5px;}
+  .contact-form input[type=text], .contact-form input[type=email], .contact-form textarea{width:100%; padding:12px 14px; border:1px solid #CFC9BA; border-radius:8px; font-size:16px; font-family:inherit; background:#fff;}
+  .contact-form textarea{min-height:130px; resize:vertical;}
+  .contact-form button{margin-top:16px; padding:13px 26px; border:none; border-radius:8px; background:var(--brass); color:#fff; font-weight:700; font-size:16px; cursor:pointer;}
+  .contact-form button:hover{background:#967950;}
+  .about-photos{display:flex; gap:16px; flex-wrap:wrap; margin:6px 0 18px;}
+  .about-photos figure{margin:0;}
+  .about-photos img{height:250px; width:auto; border-radius:10px; display:block;}
+  .about-photos figcaption{font-size:13px; color:#777; margin-top:6px;}
+  @media (max-width:700px){
+    .nav-toggle{display:block;}
+    nav{display:none; width:100%; flex-direction:column; padding-top:6px;}
+    nav.open{display:flex;}
+    nav a{margin:0; padding:10px 2px; border-top:1px solid #454b4f; font-size:16px;}
+  }
+  @media (max-width:560px){ .hero h1{font-size:31px;} .brand-name{font-size:22px;} .hero-img{height:230px;} .about-photos img{height:200px;} }
+
+  .article{padding:42px 0 8px; max-width:760px;}
+  .article h1{font-size:34px; line-height:1.2; color:var(--graphite); font-weight:800; margin-bottom:18px;}
+  .article h2{margin:32px 0 10px;}
+  .article h3{font-size:19px; color:var(--graphite); margin:24px 0 8px;}
+  .article p{margin-bottom:14px; color:#333;}
+  .article ul,.article ol{margin:0 0 16px 22px;}
+  .article li{margin-bottom:7px; color:#333;}
+  .article a{color:var(--slate); font-weight:600;}
+  .article a:hover{color:var(--brass);}
+  .article hr{border:none; border-top:1px solid #E3DED2; margin:28px 0;}
+  .article .author-line{font-weight:700; color:var(--graphite); margin-top:22px;}
+  .article li.check{list-style:none; margin-left:-22px;}
+  .article input[type=checkbox]{width:16px; height:16px; margin-right:8px; vertical-align:-2px; accent-color:var(--brass);}
+  .sources{background:var(--card); border:1px solid #E3DED2; border-radius:10px; padding:20px 22px; margin:30px 0 6px;}
+  .sources h2{font-size:20px; margin:0 0 10px;}
+  .sources ul{margin:0 0 0 20px;}
+  .sources li{margin-bottom:6px;}
+  .cta-box{margin:30px 0 8px; max-width:760px;}
+  @media (max-width:560px){ .article h1{font-size:27px;} }
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="wrap header-row">
+    <a class="brand" href="/" style="text-decoration:none;color:inherit;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 58" aria-label="ProCheck logo"><path d="M22 16 Q70 -7 112 22" fill="none" stroke="#2F3437" stroke-width="4" stroke-linecap="round"/><path d="M24 44 Q68 64 112 38" fill="none" stroke="#2F3437" stroke-width="3.5" stroke-linecap="round"/><line x1="21" y1="30" x2="116" y2="30" stroke="#5A6D68" stroke-width="2.5"/><rect x="2" y="20" width="19" height="19" rx="5" fill="#2F3437"/><circle cx="66" cy="30" r="6" fill="#A98A5F"/></svg>
+      <div>
+        <div class="brand-name">PROCHECK</div>
+        <div class="brand-sub">Boat Owner Printables</div>
+      </div>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="site-nav">&#9776; Menu</button>
+    <nav id="site-nav">
+      <a href="/#guides">The Guides</a>
+      <a href="/#merch">Merch</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+  <div class="wrap">
+    <div class="topbar-signup" id="releaselist">
+      <span class="tb-label">New guides, first — join the release list:</span>
+      <!-- TODO at deploy: point this form at the email-list provider (same list as the subscribe form below). -->
+      <form action="https://formspree.io/f/meaggjrn" method="post">
+        <input type="email" name="email" placeholder="you@example.com" required>
+        <button type="submit">Notify me</button>
+      </form>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <article class="article">
+<h1>Spring Boat Failures That Start With One Skipped Fall Task</h1>
+<p>Every spring, the same boats roll into service departments across BC on the same trailers, with the same problems. The owner usually says some version of: "It ran fine when I put it away."</p>
+<p>It usually did. That's the hard truth about winter storage damage — most of it happens silently, in the dark, over five months, and almost all of it traces back to one fall task that got skipped, rushed or left for a weekend that never came. I've watched these bills land on the counter. None of the owners were careless people. They were busy people, and fall is busy.</p>
+<p>Here are the pairs I see most: the skipped task, what it causes by spring, and what the repair typically involves. If you're reading this in autumn, consider it a preview you'd rather not star in.</p>
+<h2>Fuel left untreated → a boat that won't run in April</h2>
+<p><strong>The skipped task:</strong> stabilizing the fuel and running treated fuel through the engine before storage.</p>
+<p><strong>What happens:</strong> Modern gasoline contains ethanol, and ethanol absorbs water from the air. Over a winter, the mixture can separate — a water-and-ethanol layer sinks to the bottom of the tank, exactly where the fuel pickup draws from. Meanwhile the fuel that sat in the carburetor or injectors oxidizes and leaves gum and varnish behind.</p>
+<p><strong>By spring:</strong> Hard starting, rough running, stalling, or a flat refusal to start at all. The first start of the season pulls that separated layer straight into the engine.</p>
+<p><strong>The repair typically involves:</strong> draining bad fuel (and disposing of it properly), cleaning or rebuilding the carburetor or servicing clogged injectors and filters, and refilling with fresh fuel. Typical shop bills can run from a few hundred dollars for a carb clean into four figures when injectors and pumps are involved.</p>
+<h2>Engine not fogged or stored properly → corrosion where you can't see it</h2>
+<p><strong>The skipped task:</strong> fogging the engine with storage oil and putting it away dry and protected, as the owner's manual describes.</p>
+<p><strong>What happens:</strong> Inside a stored engine, bare metal surfaces sit in damp coastal air for months. Rings, cylinder walls and bearings can pick up surface corrosion, and rings can stick.</p>
+<p><strong>By spring:</strong> Low or uneven compression, smoking, rough running — or, in the worst cases, an engine that's seized or scores its cylinders in its first minutes of running.</p>
+<p><strong>The repair typically involves:</strong> At the mild end, freeing stuck rings and a careful recommissioning. At the serious end, a powerhead teardown. Typical shop bills can run from a few hundred dollars to several thousand for internal engine work.</p>
+<h2>Lower-unit oil not changed → water sitting in the gearcase all winter</h2>
+<p><strong>The skipped task:</strong> changing the gear oil in the fall — the single best chance to find water in the lower unit before it does damage.</p>
+<p><strong>What happens:</strong> If a seal has been letting water in, that water sits inside the gearcase all winter. It corrodes bearings and gears. And if enough water is present and the temperature drops hard, it can freeze and expand — gearcases can crack.</p>
+<p><strong>By spring:</strong> Milky oil discovered too late, noisy or rough bearings, a lower unit that fails under load in June, or a cracked housing found at the first service.</p>
+<p><strong>The repair typically involves:</strong> Seal kits and fresh oil if you're lucky and caught it early; bearings or a rebuilt or replacement gearcase if you're not. Typical shop bills can run from a few hundred dollars for seals to several thousand for a gearcase.</p>
+<h2>Inboard block and manifolds not drained → the cracked block</h2>
+<p><strong>The skipped task:</strong> draining the raw-water side of an inboard or sterndrive engine — block, manifolds and risers — or properly winterizing it with antifreeze.</p>
+<p><strong>What happens:</strong> Water trapped in the casting freezes, expands, and cracks the block or manifolds from the inside. This is the classic interior-of-BC failure, where a hard January freeze does in one night what a whole mild winter on the coast might not.</p>
+<p><strong>By spring:</strong> Sometimes the crack announces itself immediately — water or milky oil everywhere. Sometimes it hides until the engine is run under load, overheats, or fills a cylinder.</p>
+<p><strong>The repair typically involves:</strong> A cracked block is usually an engine replacement conversation, not a repair. Typical bills can run well into five figures for a replacement engine and labour.</p>
+<h2>Battery left in, uncharged → the battery that's done by March</h2>
+<p><strong>The skipped task:</strong> removing the battery, or keeping it charged through storage.</p>
+<p><strong>What happens:</strong> Batteries self-discharge slowly, and a discharged battery sulfates — lead sulfate hardens on the plates and capacity falls away permanently. A discharged battery can also freeze in cold weather and crack its case.</p>
+<p><strong>By spring:</strong> A battery that takes a charge on the bench and dies under the starter. Usually discovered at the launch ramp, in front of an audience.</p>
+<p><strong>The repair typically involves:</strong> Replacement. Typical bills can run from around a hundred dollars to a few hundred, depending on the battery — plus the trip it ruins, which costs more.</p>
+<h2>Water systems not drained → split pumps and lines</h2>
+<p><strong>The skipped task:</strong> draining freshwater systems, pumps, livewells and washdowns, and running antifreeze where the manual calls for it.</p>
+<p><strong>What happens:</strong> Trapped water freezes in pump housings and fittings — the small, cheap-looking plastic parts that are neither small nor cheap once labour is counted.</p>
+<p><strong>By spring:</strong> A pump that hums and moves nothing, leaks under pressure, split lines discovered one bilge-pump cycle too late.</p>
+<p><strong>The repair typically involves:</strong> Pump or fitting replacement and chasing leaks through the system. Typical bills can run from a couple of hundred dollars upward, mostly labour.</p>
+<h2>The pattern worth noticing</h2>
+<p>Read the list again and notice something: nearly every failure is cheap to prevent and expensive to fix, and the prevention is an afternoon, not a weekend. Fall-you knows all of this. Fall-you is also busy, and the boat ran fine in September.</p>
+<p>That's why a written sequence helps. Not because you don't know the tasks — because the order matters, the small ones get forgotten, and spring-you pays for whatever fall-you skipped.</p>
+<h2>Going deeper</h2>
+<p>The <strong>No. 03 Winterization &amp; Spring Commissioning Checklist</strong> is that sequence, written out in order: the fall lay-up, task by task, and the spring recommissioning that catches problems at the dock instead of at the ramp. One afternoon in the fall, against the bills above — it's the easiest math in boating.</p>
+<p class="author-line">— Michael Austin, ProCheck — marine sales, Port Coquitlam, BC</p>
+  </article>
+
+    <div class="card featured cta-box">
+      <div class="no">The full guide</div>
+      <h3>No. 03 — Winterization &amp; Spring Commissioning</h3>
+      <p>The complete fall lay-up and spring recommissioning sequence as printable check-off pages — outboards, inboards and the trailer. Instant-download PDF.</p>
+      <div class="price">$11.99</div>
+      <div class="buy-row"><a class="buy-etsy" href="https://www.etsy.com/ca/listing/4616797071">Buy on Etsy</a><a class="buy-gum" href="https://procheck.gumroad.com/l/jvsaqw">Gumroad</a></div>
+    </div>
+  <div class="to-top"><a href="#top">&uarr; Back to top</a></div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div>&copy; 2026 ProCheck — Boat Owner Printables, by Michael Austin &middot; Coquitlam, BC</div>
+    <div><a href="https://procheckmarine.com">PROCHECKMARINE.COM</a></div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var btn = document.getElementById('navToggle');
+    var nav = document.getElementById('site-nav');
+    if(!btn || !nav) return;
+    btn.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        nav.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>
