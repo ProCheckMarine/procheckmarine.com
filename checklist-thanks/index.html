@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>You're on the list — here's your checklist | ProCheck Marine</title>
+<meta name="description" content="Thanks for joining the ProCheck Release List. Download your free BC Boat Paperwork Checklist.">
+<style>
+*{box-sizing:border-box}
+:root{--graphite:#2F3437;--gelcoat:#F4F1EA;--slate:#5A6D68;--brass:#A98A5F;--aluminium:#C9CED1;--ink:#222628;}
+body{margin:0;background:var(--gelcoat);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.6;}
+header{position:sticky;top:0;z-index:10;background:var(--graphite);color:var(--gelcoat);}
+.wrap{max-width:1020px;margin:0 auto;padding:0 20px;}
+.header-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding-top:14px;padding-bottom:14px;}
+.brand{display:flex;align-items:center;gap:12px;}
+.brand svg{width:66px;height:32px;flex:none;}
+.brand-name{font-size:26px;font-weight:900;letter-spacing:.14em;line-height:1;}
+.brand-sub{font-size:13px;color:var(--aluminium);letter-spacing:.08em;margin-top:5px;}
+.nav-toggle{display:none;margin-left:auto;background:var(--brass);color:#fff;border:0;border-radius:8px;padding:10px 14px;font-size:15px;font-weight:700;cursor:pointer;}
+#site-nav{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap;}
+#site-nav a{color:var(--gelcoat);text-decoration:none;font-weight:600;padding:8px 12px;border-radius:8px;}
+#site-nav a:hover{background:#3d4347;}
+main{padding:28px 0 8px;}
+h1{font-size:34px;line-height:1.15;margin:6px 0 12px;}
+.card{background:#fff;border:1px solid #e3ddd0;border-radius:12px;padding:18px 20px;margin:16px 0;}
+.cta-box{border:2px solid var(--brass);}
+.download-btn{display:inline-block;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:700;background:var(--brass);color:#fff;}
+.download-btn:hover{background:#96784f;}
+.to-top{margin:24px 0 10px;}
+.to-top a{color:var(--slate);}
+footer{background:var(--graphite);color:var(--gelcoat);margin-top:36px;padding:26px 0;}
+footer .wrap{display:flex;gap:16px;justify-content:space-between;flex-wrap:wrap;}
+footer a{color:var(--gelcoat);}
+@media(max-width:720px){h1{font-size:28px;}.nav-toggle{display:block;}#site-nav{display:none;width:100%;flex-direction:column;padding-bottom:10px;}#site-nav.open{display:flex;}#site-nav a{padding:10px 12px;}}
+</style>
+</head>
+<body id="top">
+<header>
+<div class="wrap header-row">
+<a class="brand" href="/" style="text-decoration:none;color:inherit;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 58" aria-label="ProCheck logo">
+<rect x="2" y="2" width="116" height="54" rx="9" fill="none" stroke="#F4F1EA" stroke-width="3"/>
+<path d="M12 40 L32 18 L52 40" fill="none" stroke="#F4F1EA" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M68 40 L86 18 L104 40" fill="none" stroke="#A98A5F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="32" cy="18" r="5" fill="#A98A5F"/>
+<circle cx="86" cy="18" r="5" fill="#F4F1EA"/>
+</svg>
+<div>
+<div class="brand-name">PROCHECK</div>
+<div class="brand-sub">Boat Owner Printables</div>
+</div>
+</a>
+<button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="site-nav">&#9776; Menu</button>
+<nav id="site-nav">
+<a href="/#guides">The Guides</a>
+<a href="/#merch">Merch</a>
+<a href="/#about">About</a>
+<a href="/#contact">Contact</a>
+</nav>
+</div>
+</header>
+<main class="wrap">
+<h1>You're on the list — here's your checklist</h1>
+<div class="card cta-box">
+<p>Thanks for joining the ProCheck Release List. Your free BC Boat Paperwork Checklist is ready:</p>
+<p><a class="download-btn" href="/files/bc-paperwork-checklist.pdf">Download the BC Paperwork Checklist (PDF)</a></p>
+<p>New guides and printables are announced to the list first. Fair winds — and if you're mid-purchase, the full Used Boat &amp; Outboard Buyer Checklist lives in the shop.</p>
+</div>
+<div class="to-top"><a href="/">&larr; Back to ProCheck Marine</a></div>
+</main>
+<footer>
+<div class="wrap">
+<div>&copy; 2026 ProCheck — Boat Owner Printables, by Michael Austin &middot; Coquitlam, BC</div>
+<div><a href="https://procheckmarine.com">PROCHECKMARINE.COM</a></div>
+</div>
+</footer>
+<script>
+(function(){
+var btn = document.getElementById('navToggle');
+var nav = document.getElementById('site-nav');
+if(!btn || !nav) return;
+btn.addEventListener('click', function(){
+var open = nav.classList.toggle('open');
+btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+});
+nav.addEventListener('click', function(e){
+if(e.target.tagName === 'A'){
+nav.classList.remove('open');
+btn.setAttribute('aria-expanded', 'false');
+}
+});
+})();
+</script>
+</body>
+</html>
